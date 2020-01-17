@@ -22,9 +22,9 @@ class MyThread(QThread):
 
     def run(self):
         global i
-        tmp=Ui_Random()
-        button = tmp.label
-        _translate = QtCore.QCoreApplication.translate
+        #tmp=Ui_Random()
+        #button = tmp.label
+        #_translate = QtCore.QCoreApplication.translate
         while i >= 0:
             num = random.randint(1, 50)
             text = "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">" + str(num) + "</span></p></body></html>"
@@ -51,7 +51,7 @@ class Ui_Random(QWidget):
         #self.quit()
 
 
-    def callback(self, signal):  # 这里的 i 就是任务线程传回的数据
+    def callback(self, signal):  # 这里的 signal 就是任务线程传回的数据
         self.label.setText(signal)
         #print(signal)
 
