@@ -14,7 +14,7 @@ from PyQt5.QtCore import QThread, pyqtSignal
 
 i = 20
 
-class Ui_Random(object):
+class Ui_Random(QWidget):
     def __init__(self):
         super(Ui_Random, self).__init__()
         self.setupUi(self)
@@ -56,25 +56,21 @@ class MyThread(QThread):
 
     def run(self):
         global i
-
-        button = Ui_Random.label
+        tmp=Ui_Random()
+        button = tmp.label
 
         _translate = QtCore.QCoreApplication.translate
         while i >= 0:
             num = random.randint(1, 50)
             text = "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">" + str(num) + "</span></p></body></html>"
-            button.setText(_translate("Form", text))
+            button.setText(text)
             i -= 1
             time.sleep(0.2)
         i = 20
 
-class mwindow(QWidget, Ui_Random):
-    def __init__(self):
-        super(mwindow, self).__init__()
-        self.setupUi(self)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    w = mwindow()
+    w = Ui_Random()
     w.show()
     sys.exit(app.exec_())
