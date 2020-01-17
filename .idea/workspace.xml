@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="576d10f9-db3f-49d2-9486-f27562b3f997" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/tools/adbtool_wechat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/App/AppInfo/PluginEULA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/App/AppInfo/plugininstaller.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/Data/PortableApps.comInstaller/license.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/JavaPortable.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/Other/Source/PortableApps.comInstallerPluginCustom.nsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/Other/Source/UnpackPostInstall.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/THIRDPARTYLICENSEREADME-JAVAFX.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/THIRDPARTYLICENSEREADME.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/Welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/_DO NOT store your files here or in subfolders.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/JAWTAccessBridge-64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/JavaAccessBridge-64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/WindowsAccessBridge-64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-console-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-datetime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-debug-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-errorhandling-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-file-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-file-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-file-l2-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-handle-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-interlocked-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-libraryloader-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-localization-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-memory-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-namedpipe-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-processenvironment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-processthreads-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-processthreads-l1-1-1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-profile-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-synch-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-synch-l1-2-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-sysinfo-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-timezone-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-core-util-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-conio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-convert-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-environment-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-filesystem-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-heap-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-locale-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-math-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-multibyte-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-private-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-process-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-runtime-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-stdio-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-string-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-time-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/api-ms-win-crt-utility-l1-1-0.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/awt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/bci.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/concrt140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/dcpr.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/decora_sse.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/deploy.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/dt_shmem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/dt_socket.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/dtplugin/deployJava1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/dtplugin/npdeployJava1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/eula.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/fontmanager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/fxplugins.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/glass.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/glib-lite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/gstreamer-lite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/hprof.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/instrument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/j2pcsc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/j2pkcs11.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jaas_nt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jabswitch.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/java-rmi.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/java.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/java.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/java_crw_demo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/javacpl.cpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/javacpl.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/javafx_font.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/javafx_font_t2k.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/javafx_iio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/javaw.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/javaws.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jawt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jdwp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jfr.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jfxmedia.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jfxwebkit.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jjs.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jli.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jp2iexp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jp2launcher.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jp2native.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jp2ssv.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jpeg.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jsdt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jsound.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/jsoundds.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/keytool.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/kinit.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/klist.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/ktab.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/lcms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/management.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/mlib_image.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/msvcp140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/msvcr100.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/net.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/nio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/npt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/orbd.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/pack200.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/plugin2/msvcr100.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/plugin2/npjp2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/policytool.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/prism_common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/prism_d3d.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/prism_sw.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/resource.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/rmid.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/rmiregistry.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/server/Xusage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/server/jvm.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/servertool.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/splashscreen.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/ssv.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/ssvagent.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/sunec.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/sunmscapi.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/t2k.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/tnameserv.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/ucrtbase.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/unpack.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/unpack200.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/vcruntime140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/verify.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/w2k_lsa_auth.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/wsdetect.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/bin/zip.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/accessibility.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/amd64/jvm.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/calendars.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/charsets.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/classlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/cmm/CIEXYZ.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/cmm/GRAY.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/cmm/LINEAR_RGB.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/cmm/PYCC.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/cmm/sRGB.pf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/content-types.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/currency.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/ffjcext.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_de.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_es.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_fr.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_it.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_ja.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_ko.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_pt_BR.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_sv.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_zh_CN.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_zh_HK.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/messages_zh_TW.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/splash.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/splash@2x.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/splash_11-lic.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/deploy/splash_11@2x-lic.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/access-bridge-64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/cldrdata.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/dnsns.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/jaccess.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/jfxrt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/localedata.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/meta-index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/nashorn.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/sunec.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/sunjce_provider.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/sunmscapi.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/sunpkcs11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/ext/zipfs.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/flavormap.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fontconfig.bfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fontconfig.properties.src" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fonts/LucidaBrightDemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fonts/LucidaBrightDemiItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fonts/LucidaBrightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fonts/LucidaBrightRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fonts/LucidaSansDemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fonts/LucidaSansRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fonts/LucidaTypewriterBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/fonts/LucidaTypewriterRegular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/hijrah-config-umalqura.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/images/cursors/cursors.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/images/cursors/invalid32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/images/cursors/win32_CopyDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/images/cursors/win32_CopyNoDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/images/cursors/win32_LinkDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/images/cursors/win32_LinkNoDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/images/cursors/win32_MoveDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/images/cursors/win32_MoveNoDrop32x32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/javafx.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/javaws.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/jce.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/jfr.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/jfr/default.jfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/jfr/profile.jfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/jfxswt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/jsse.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/jvm.hprof.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/management-agent.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/management/jmxremote.access" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/management/jmxremote.password.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/management/management.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/management/snmp.acl.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/meta-index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/net.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/plugin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/psfont.properties.ja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/psfontj2d.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/resources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/rt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/blacklist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/blacklisted.certs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/cacerts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/java.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/java.security" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/javaws.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/policy/limited/US_export_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/policy/limited/local_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/policy/unlimited/US_export_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/policy/unlimited/local_policy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/security/trusted.libraries" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/sound.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/tzdb.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/lib/tzmappings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java64/release" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Newserver/posttest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Newserver/posttest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Newserver/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Newserver/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Newserver/test.ppt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/old/toolboxclass.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/toolbox/123.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/Im1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/Im1.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/chooseserver.no.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/chooseserver.no.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/chooseserver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/chooseserver.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/downloadobject.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/downloadobject.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/login.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/login_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/login_test.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/talk.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/test.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/zhixueall.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/快速验证.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/文件转换.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/文件转换.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/原始图形界面文件/测试区.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/备份/login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/excel查询测试/study.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/excel查询测试/test.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/md5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/下载漫画图/cartoonDownload_Easyuse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/下载漫画图/cartoonDownload_first.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/下载漫画图/html.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/互传文件测试（未证实）/123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/互传文件测试（未证实）/client_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/互传文件测试（未证实）/server_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/数据库测试/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/文件传输测试（有效）/file-exchage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/文件传输测试（有效）/server_filereceive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/文件在线转换api测试(完成修正，待验证)/123.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/文件在线转换api测试(完成修正，待验证)/123.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/文件在线转换api测试(完成修正，待验证)/picturetransform.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/文件在线转换api测试(完成修正，待验证)/posttest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/文件在线转换api测试(完成修正，待验证)/speechopen.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/界面测试/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/界面测试/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/测试/界面测试/test.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/mpython.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/portcheck.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/test.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="UnitAi-Project" />
+    <favorites_list name="未命名的" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Request" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>None</find>
+      <find>print</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ReSn8eseMIe5di57zSkOA7oyO6" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Program Files/python/python.exe" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="UnitAi-Project" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="UnitAi-Project" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\UnitAi-Project\client\原始图形界面文件" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\UnitAi-Project\client" />
+      <recent name="E:\UnitAi-Project\client\images" />
+      <recent name="E:\UnitAi-Project\server" />
+      <recent name="E:\UnitAi-Project\client\备份" />
+      <recent name="E:\UnitAi-Project\client\测试\界面测试" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.posttest">
+    <configuration name="Chooseserver" type="PythonConfigurationType" factoryName="Python">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client/Chooseserver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" singleton="false">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="adbtool1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="E:\UnitAi-Project\tools\adbtool_wechat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="login" type="PythonConfigurationType" factoryName="Python">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client/login.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="posttest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Newserver" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Newserver/posttest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="send" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client/send.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Newserver" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Newserver/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="server_login" type="PythonConfigurationType" factoryName="Python" singleton="false">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server/server_login.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sqlini" type="PythonConfigurationType" factoryName="Python">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/server" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server/sqlini.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Newserver" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Newserver/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Chooseserver" />
+      <item itemvalue="Python.Main" />
+      <item itemvalue="Python.login" />
+      <item itemvalue="Python.server_login" />
+      <item itemvalue="Python.sqlini" />
+      <item itemvalue="Python.server" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.send" />
+      <item itemvalue="Python.posttest" />
+      <item itemvalue="Python.adbtool1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.posttest" />
+        <item itemvalue="Python.server" />
+        <item itemvalue="Python.adbtool1" />
+        <item itemvalue="Python.send" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="576d10f9-db3f-49d2-9486-f27562b3f997" name="默认更改列表" comment="" />
+      <created>1563181076984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563181076984</updated>
+      <workItem from="1573902571845" duration="663000" />
+      <workItem from="1573903866322" duration="177000" />
+      <workItem from="1573904166257" duration="288000" />
+      <workItem from="1573905250255" duration="387000" />
+      <workItem from="1573905679060" duration="677000" />
+      <workItem from="1574553814585" duration="2731000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tmp/portcheck.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tmp/portcheck.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tmp/portcheck.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tmp/portcheck.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/UnitAi_Project$posttest.coverage" NAME="posttest Coverage Results" MODIFIED="1574555119103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/client/测试/文件在线转换api测试(完成修正，待验证)" />
+    <SUITE FILE_PATH="coverage/UnitAi_Project$pytest_in_out_py.coverage" NAME="pytest in out.py Coverage Results" MODIFIED="1574555146895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_api_Easytest" />
+    <SUITE FILE_PATH="coverage/UnitAi_Project$post_def.coverage" NAME="post_def Coverage Results" MODIFIED="1574554782326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_api_Easytest" />
+    <SUITE FILE_PATH="coverage/UnitAi_Project$pytest_in_posttest_py.coverage" NAME="pytest in posttest.py Coverage Results" MODIFIED="1574555204533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newserver" />
+    <SUITE FILE_PATH="coverage/UnitAi_Project$posttest__1_.coverage" NAME="posttest (1) Coverage Results" MODIFIED="1574556534038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newserver" />
+    <SUITE FILE_PATH="coverage/UnitAi_Project$test.coverage" NAME="test Coverage Results" MODIFIED="1574556354249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newserver" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="setValue">
+      <expression>
+        <expression-string>'E:/UnitAi-Project/Newserver/download/exchange'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+</project>
