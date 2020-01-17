@@ -12,21 +12,48 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 from PyQt5.QtCore import QThread, pyqtSignal
 
+
+
 i = 20
+class MyThread(QThread):
+    signal = pyqtSignal(str)
+    def __init__(self):
+        super(MyThread, self).__init__()
+
+    def run(self):
+        global i
+        tmp=Ui_Random()
+        button = tmp.label
+        _translate = QtCore.QCoreApplication.translate
+        while i >= 0:
+            num = random.randint(1, 50)
+            text = "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">" + str(num) + "</span></p></body></html>"
+            #button.setText(text)
+            i -= 1
+            time.sleep(0.05)
+            self.signal.emit(text)
+        i = 20
+
+
+#thread = MyThread()
 
 class Ui_Random(QWidget):
     def __init__(self):
         super(Ui_Random, self).__init__()
         self.setupUi(self)
-        self.MyThread = MyThread()  # 实例化自己建立的任务线程类
-        self.MyThread.signal.connect(self.callback)  # 设置任务线程发射信号触发的函数
 
     def _update(self):
-        self.MyThread.start()
+        #global thread
+        self.MyThreado = MyThread()# 实例化自己建立的任务线程类
+        self.MyThreado.signal.connect(self.callback)# 设置任务线程发射信号触发的函数
+        self.MyThreado.start()
+        #self.MyThreado.wait()
+        #self.quit()
 
-    def callback(self, i):  # 这里的 i 就是任务线程传回的数据
-        #self.pushButton.setText(i)
-        pass
+
+    def callback(self, signal):  # 这里的 i 就是任务线程传回的数据
+        self.label.setText(signal)
+        #print(signal)
 
     def setupUi(self, Form):
         Form.setObjectName("Form")
@@ -49,24 +76,7 @@ class Ui_Random(QWidget):
         self.pushButton.setText(_translate("Form", "Start"))
         self.label.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">1</span></p></body></html>"))
 
-class MyThread(QThread):
-    signal = pyqtSignal(str)
-    def __init__(self):
-        super(MyThread, self).__init__()
 
-    def run(self):
-        global i
-        tmp=Ui_Random()
-        button = tmp.label
-
-        _translate = QtCore.QCoreApplication.translate
-        while i >= 0:
-            num = random.randint(1, 50)
-            text = "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">" + str(num) + "</span></p></body></html>"
-            button.setText(text)
-            i -= 1
-            time.sleep(0.2)
-        i = 20
 
 
 if __name__ == '__main__':
