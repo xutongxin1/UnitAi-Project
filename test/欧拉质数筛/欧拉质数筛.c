@@ -42,7 +42,6 @@ int main(void){
     }
 
     time_t time_end = clock();
-    time_t time = time_end - time_start;
     printf("time cost:%fms\n",((double)(time_end - time_start)) / CLOCKS_PER_SEC * 100);
 
     system("pause");
