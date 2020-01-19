@@ -78,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.random_num">
+  <component name="RunManager" selected="Python.server">
     <configuration name="Chooseserver" type="PythonConfigurationType" factoryName="Python">
       <module name="UnitAi-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -308,9 +308,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.server" />
         <item itemvalue="Python.random_num" />
         <item itemvalue="Python.posttest" />
-        <item itemvalue="Python.server" />
         <item itemvalue="Python.adbtool1" />
         <item itemvalue="Python.send" />
       </list>
@@ -333,6 +333,14 @@
       <workItem from="1573905679060" duration="677000" />
       <workItem from="1574553814585" duration="2731000" />
     </task>
+    <task id="LOCAL-00001" summary="123">
+      <created>1579428709559</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579428709559</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -376,6 +384,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="123" />
+    <option name="LAST_COMMIT_MESSAGE" value="123" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

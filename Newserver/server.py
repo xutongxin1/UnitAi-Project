@@ -13,6 +13,7 @@ app.config['UPLOADED_EXCHANGE_DEST']="E:/UnitAi-Project/Newserver/upload"
 exchangeupload = UploadSet('exchange', ALL)
 configure_uploads(app, exchangeupload)
 patch_request_class(app)
+path=os.getcwd()
 
 def hash(word):
     sha256 = hashlib.sha256()
@@ -102,10 +103,19 @@ def download(type):
 
 @app.route('/upload/exchange', methods=['POST'])
 def upload():
-    print(request.files)
-    filename = exchangeupload.save(request.files["ex"])
-    file_url = exchangeupload.url(filename)
-    return filename
+    if request.files!=None:
+        #print(request.files)
+        filename_past = exchangeupload.save(request.files["ex"])
+        print(filename_past)
+        filename=request.form["filename"]
+        print(filename)
+        os.rename(path+"/upload/"+filename_past,path+"/upload/"+filename)
+
+        return filename
+    else:
+        abort(401)
+    #file_url = exchangeupload.url(filename)
+
 
 if __name__ == '__main__':
     app.run(port=19150)
