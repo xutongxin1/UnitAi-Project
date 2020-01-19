@@ -1,6 +1,7 @@
 # code:utf-8
 from flask import Flask, redirect, url_for, session, request, send_from_directory, abort, make_response
 import json, os, hashlib, time
+from flask_uploads import UploadSet, configure_uploads, ALL,patch_request_class
 
 # from osdef import isHavefile
 
@@ -8,7 +9,10 @@ app = Flask(__name__)
 Version = "0.0.1b"
 app.config["SECRET_KEY"] = "renyizifuchuan"
 prpath = os.path.dirname(os.path.realpath(__file__))
-
+app.config['UPLOADED_EXCHANGE_DEST']="E:/UnitAi-Project/Newserver/upload"
+exchangeupload = UploadSet('exchange', ALL)
+configure_uploads(app, exchangeupload)
+patch_request_class(app)
 
 def hash(word):
     sha256 = hashlib.sha256()
@@ -96,6 +100,12 @@ def download(type):
     # else:
     # abort(404)
 
+@app.route('/upload/exchange', methods=['POST'])
+def upload():
+    print(request.files)
+    filename = exchangeupload.save(request.files["ex"])
+    file_url = exchangeupload.url(filename)
+    return filename
 
 if __name__ == '__main__':
     app.run(port=19150)
