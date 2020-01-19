@@ -22,20 +22,15 @@ class MyThread(QThread):
 
     def run(self):
         global i
-        tmp=Ui_Random()
-        button = tmp.label
-        _translate = QtCore.QCoreApplication.translate
         while i >= 0:
             num = random.randint(1, 50)
             text = "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">" + str(num) + "</span></p></body></html>"
-            #button.setText(text)
             i -= 1
             time.sleep(0.05)
             self.signal.emit(text)
         i = 20
 
 
-#thread = MyThread()
 
 class Ui_Random(QWidget):
     def __init__(self):
