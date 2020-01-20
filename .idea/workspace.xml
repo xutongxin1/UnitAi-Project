@@ -30,6 +30,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1ReSn8eseMIe5di57zSkOA7oyO6" />
   <component name="ProjectViewState">
@@ -285,14 +286,14 @@
     <list>
       <item itemvalue="Python.Chooseserver" />
       <item itemvalue="Python.Main" />
-      <item itemvalue="Python.adbtool1" />
       <item itemvalue="Python.login" />
+      <item itemvalue="Python.server_login" />
+      <item itemvalue="Python.sqlini" />
+      <item itemvalue="Python.adbtool1" />
       <item itemvalue="Python.posttest" />
       <item itemvalue="Python.random_num (2)" />
       <item itemvalue="Python.random_num" />
       <item itemvalue="Python.server" />
-      <item itemvalue="Python.server_login" />
-      <item itemvalue="Python.sqlini" />
     </list>
     <recent_temporary>
       <list>
@@ -382,6 +383,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="603" y="334" key="#com.intellij.tools.ToolEditorDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579445514859" />
+    <state x="500" y="98" key="CommitChangelistDialog2" timestamp="1579505834650">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="500" y="98" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1579505834650" />
     <state x="620" y="260" key="FileChooserDialogImpl" timestamp="1579445228542">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -406,14 +411,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="147" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1579504507210" />
+    <state x="607" y="220" key="VCS.ChangeListViewerDialog" timestamp="1579505876468">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="607" y="220" key="VCS.ChangeListViewerDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579505876468" />
     <state x="520" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1579424922122">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="520" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579424922122" />
-    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579505794206">
+    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579505851474">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1579505794206" />
+    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1579505851474" />
+    <state x="529" y="296" key="git4idea.merge.GitPullDialog" timestamp="1579505889199">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="529" y="296" key="git4idea.merge.GitPullDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579505889199" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
