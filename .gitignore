@@ -1,1 +1,10 @@
 
+*.xml
+*.pyc
+.idea/workspace.xml
+client/__pycache__/Chooseserver.cpython-37.pyc
+client/__pycache__/config.cpython-37.pyc
+client/__pycache__/Im.cpython-37.pyc
+client/__pycache__/login.cpython-37.pyc
+client/__pycache__/send.cpython-37.pyc
+*.pyc

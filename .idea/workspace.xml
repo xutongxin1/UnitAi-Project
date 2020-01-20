@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="576d10f9-db3f-49d2-9486-f27562b3f997" name="默认更改列表" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="576d10f9-db3f-49d2-9486-f27562b3f997" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,19 +12,6 @@
   <component name="FavoritesManager">
     <favorites_list name="UnitAi-Project" />
     <favorites_list name="未命名的" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/random_num/random_num (2).py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,58 +31,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/test/random_num/random_num (2).py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="140" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="970" />
-  </component>
   <component name="ProjectId" id="1ReSn8eseMIe5di57zSkOA7oyO6" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="UnitAi-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UnitAi-project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UnitAi-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UnitAi-project" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UnitAi-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UnitAi-project" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="random_num" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Program Files/Anaconda3/Scripts/pyuic5.exe" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -116,19 +66,7 @@
       <recent name="E:\UnitAi-Project\client\测试\界面测试" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.random_num (2)">
+  <component name="RunManager" selected="Python.login">
     <configuration name="Chooseserver" type="PythonConfigurationType" factoryName="Python">
       <module name="UnitAi-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -366,6 +304,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -394,28 +344,6 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4994401" visible="true" weight="0.14656213" />
-      <window_info id="Structure" order="1" sideWeight="0.5005599" side_tool="true" weight="0.14656213" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.20403588" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -425,12 +353,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -454,6 +376,44 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="603" y="334" key="#com.intellij.tools.ToolEditorDialog" timestamp="1579445514859">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="603" y="334" key="#com.intellij.tools.ToolEditorDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579445514859" />
+    <state x="620" y="260" key="FileChooserDialogImpl" timestamp="1579445228542">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="620" y="260" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1579445228542" />
+    <state width="1659" height="183" key="GridCell.Tab.0.bottom" timestamp="1579504968964">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="183" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1579504968964" />
+    <state width="1659" height="183" key="GridCell.Tab.0.center" timestamp="1579504968964">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="183" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1579504968964" />
+    <state width="1659" height="183" key="GridCell.Tab.0.left" timestamp="1579504968964">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="183" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1579504968964" />
+    <state width="1659" height="183" key="GridCell.Tab.0.right" timestamp="1579504968964">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="183" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1579504968964" />
+    <state x="341" y="147" key="SettingsEditor" timestamp="1579504507210">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="341" y="147" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1579504507210" />
+    <state x="520" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1579424922122">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="520" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579424922122" />
+    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579505794206">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1579505794206" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -481,14 +441,6 @@
       </breakpoints>
     </breakpoint-manager>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/UnitAi_Project$posttest.coverage" NAME="posttest Coverage Results" MODIFIED="1574555119103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/client/测试/文件在线转换api测试(完成修正，待验证)" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$pytest_in_out_py.coverage" NAME="pytest in out.py Coverage Results" MODIFIED="1574555146895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_api_Easytest" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$post_def.coverage" NAME="post_def Coverage Results" MODIFIED="1574554782326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_api_Easytest" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$pytest_in_posttest_py.coverage" NAME="pytest in posttest.py Coverage Results" MODIFIED="1574555204533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newserver" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$posttest__1_.coverage" NAME="posttest (1) Coverage Results" MODIFIED="1574556534038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newserver" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$test.coverage" NAME="test Coverage Results" MODIFIED="1574556354249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newserver" />
-  </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
       <expression>
@@ -497,14 +449,5 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/random_num/random_num (2).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
