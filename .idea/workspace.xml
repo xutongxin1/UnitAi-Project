@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="576d10f9-db3f-49d2-9486-f27562b3f997" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/filereceive.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/experimentfile/filereceive.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -292,14 +291,14 @@
     <list>
       <item itemvalue="Python.Chooseserver" />
       <item itemvalue="Python.Main" />
-      <item itemvalue="Python.欧拉质数筛" />
-      <item itemvalue="Python.adbtool_wechat" />
-      <item itemvalue="Python.file-exchage" />
       <item itemvalue="Python.login" />
-      <item itemvalue="Python.posttest" />
-      <item itemvalue="Python.server" />
       <item itemvalue="Python.server_login" />
       <item itemvalue="Python.sqlini" />
+      <item itemvalue="Python.server" />
+      <item itemvalue="Python.posttest" />
+      <item itemvalue="Python.adbtool_wechat" />
+      <item itemvalue="Python.file-exchage" />
+      <item itemvalue="Python.欧拉质数筛" />
     </list>
     <recent_temporary>
       <list>
@@ -349,7 +348,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579505774528</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="123">
+      <created>1579510060759</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579510060759</updated>
+    </task>
+    <task id="LOCAL-00005" summary="123">
+      <created>1579510148168</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579510148168</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
