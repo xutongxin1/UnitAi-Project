@@ -1,14 +1,19 @@
 import json, requests
 
-url = 'http://127.0.0.1:19150/download/exchange'
+url = 'https://xutongxin.coding.net/api/v2/account/login'
 data = {
-    "filename": "1.ppt"
+    "account": "13360225383",
+    "password":  "b2df1a9622be0bd3577153b0ccbd0877170a12ab"
 }
 headers = {
-    'Content-Type': 'application/json'
+"Content-Type":"application/x-www-form-urlencoded"
 }
-req = requests.post(url, json.dumps(data), headers=headers)
+req = requests.post(url, data=data, headers=headers)
 # result = json.loads(req.text)
-result = req.headers
-with open("test.ppt", 'wb') as f:
-    f.write(req.content)
+result = req.cookies.get_dict()
+
+if "eid" in result.keys():
+    print(result["eid"])
+
+#with open("test.ppt", 'wb') as f:
+    #f.write(req.content)
