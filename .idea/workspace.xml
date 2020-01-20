@@ -383,10 +383,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="603" y="334" key="#com.intellij.tools.ToolEditorDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579445514859" />
-    <state x="500" y="98" key="CommitChangelistDialog2" timestamp="1579505834650">
+    <state x="500" y="98" key="CommitChangelistDialog2" timestamp="1579505910147">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="500" y="98" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1579505834650" />
+    <state x="500" y="98" key="CommitChangelistDialog2/0.0.1680.1010@0.0.1680.1010" timestamp="1579505910147" />
     <state x="620" y="260" key="FileChooserDialogImpl" timestamp="1579445228542">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -411,22 +411,22 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="147" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1579504507210" />
-    <state x="607" y="220" key="VCS.ChangeListViewerDialog" timestamp="1579505876468">
+    <state x="607" y="220" key="VCS.ChangeListViewerDialog" timestamp="1579505928128">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="607" y="220" key="VCS.ChangeListViewerDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579505876468" />
+    <state x="607" y="220" key="VCS.ChangeListViewerDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579505928128" />
     <state x="520" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1579424922122">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="520" y="329" key="com.intellij.ide.util.TipDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579424922122" />
-    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579505851474">
+    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579505915084">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1579505851474" />
-    <state x="529" y="296" key="git4idea.merge.GitPullDialog" timestamp="1579505889199">
+    <state x="632" y="422" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1010@0.0.1680.1010" timestamp="1579505915084" />
+    <state x="529" y="296" key="git4idea.merge.GitPullDialog" timestamp="1579505948357">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="529" y="296" key="git4idea.merge.GitPullDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579505889199" />
+    <state x="529" y="296" key="git4idea.merge.GitPullDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579505948357" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
