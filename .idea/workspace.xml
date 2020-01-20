@@ -292,14 +292,14 @@
     <list>
       <item itemvalue="Python.Chooseserver" />
       <item itemvalue="Python.Main" />
-      <item itemvalue="Python.login" />
-      <item itemvalue="Python.server_login" />
-      <item itemvalue="Python.sqlini" />
-      <item itemvalue="Python.server" />
-      <item itemvalue="Python.posttest" />
+      <item itemvalue="Python.欧拉质数筛" />
       <item itemvalue="Python.adbtool_wechat" />
       <item itemvalue="Python.file-exchage" />
-      <item itemvalue="Python.欧拉质数筛" />
+      <item itemvalue="Python.login" />
+      <item itemvalue="Python.posttest" />
+      <item itemvalue="Python.server" />
+      <item itemvalue="Python.server_login" />
+      <item itemvalue="Python.sqlini" />
     </list>
     <recent_temporary>
       <list>
