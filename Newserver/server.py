@@ -104,14 +104,17 @@ def download(type):
 @app.route('/upload/exchange', methods=['POST'])
 def upload():
     if request.files!=None:
-        #print(request.files)
+        print(request.files)
         filename_past = exchangeupload.save(request.files["ex"])
         print(filename_past)
-        filename=request.form["filename"]
-        print(filename)
-        os.rename(path+"/upload/"+filename_past,path+"/upload/"+filename)
+        result=request.form.to_dict()
+        print(type(result))
+        if "filename" in result.keys():
+            filename=result["filename"]
+            print(filename)
+            os.rename(path+"/upload/"+filename_past,path+"/upload/"+filename)
 
-        return filename
+            return {"code": "0"}
     else:
         abort(401)
     #file_url = exchangeupload.url(filename)

@@ -87,6 +87,21 @@ def login_old(acc,pd):
 
 #发送文件函数
 #标准文件发送函数(带检查，全加载式检查文件，不带进度，适用于10m以下）
+def sendfile(url,data,whfile,type):
+    header = {"Content-Type": "multipart/form-data"}
+    file={type: open(whfile,"rb")}
+    req=requests.post(url,data,files=file)
+    print(req.status_code)
+    if req.status_code==200:
+        return 0
+    elif req.status_code==501:
+        return 1
+    elif req.status_code==400:
+        return 2
+    elif req.status_code==401:
+        return 3
+
+
 def sendfile1(ip,port,head,whfile):
     s = socket.socket()
     ip = socket.gethostname()

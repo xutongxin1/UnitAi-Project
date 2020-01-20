@@ -6,7 +6,7 @@ from PyQt5.QtGui import QIcon, QPainter, QPixmap,QPalette,QBrush
 import sys,os,socket,json,time,hashlib
 
 #基本五大包导入
-from send import sendfile1
+from send import sendfile
 num = 0
 class Ui_file_exchange(QMainWindow):
     def __init__(self):
@@ -21,14 +21,15 @@ class Ui_file_exchange(QMainWindow):
             if len(files)==0:
                 return
             global num
-            for file in files:
-                print(file)
+            for path in files:
+                print(path)
                 self.tableWidget.setItem(num, 0, QTableWidgetItem(num))
-                self.tableWidget.setItem(num, 1, QTableWidgetItem(file))
-                q = file.find('.', 10, -1)
-                b = file[q + 1:]
-                print(b)
-                if (b == "doc" or b == "docx" or b == "ppt" or b == "pptx" or b == "md" or b == "ppts"):
+                self.tableWidget.setItem(num, 1, QTableWidgetItem(path))
+                filepath, fullflname = os.path.split(path)
+                fname, ext = os.path.splitext(fullflname)
+                print(ext)
+
+                if (ext == ".doc" or ext == ".docx" or ext == ".ppt" or ext == ".pptx" or ext == ".xlsx" or ext == ".ppts"):
                     self.tableWidget.setItem(num, 2, QTableWidgetItem("pdf"))
                 self.tableWidget.setItem(num, 3, QTableWidgetItem("就绪"))
 
@@ -47,13 +48,14 @@ class Ui_file_exchange(QMainWindow):
 
                 self.tableWidget.setItem(num, 0, QTableWidgetItem(num))
                 self.tableWidget.setItem(num, 1, QTableWidgetItem(path))
+                filepath, fullflname = os.path.split(path)
+                print(fullflname)
+                fname, ext = os.path.splitext(fullflname)
 
-                q=path.find('.', -5, -1)
-                b=path[q+1:]
-                if(b=="doc"or b=="docx" or b=="ppt" or b=="pptx" or b=="xlsx" or b=="ppts"):
-                    self.tableWidget.setItem(num, 2, QTableWidgetItem("pdf"))
-                    b = self.tableWidget.item(num, 2).text()
-                    print(b)
+                #if(ext=="doc"or ext=="docx" or ext=="ppt" or ext=="pptx" or ext=="xlsx" or ext=="ppts"):
+                    #self.tableWidget.setItem(num, 2, QTableWidgetItem("pdf"))
+                    #ext = self.tableWidget.item(num, 2).text()
+                    #print(ext)
                 self.tableWidget.setItem(num, 3, QTableWidgetItem("就绪"))
                 num+=1
 
@@ -62,11 +64,9 @@ class Ui_file_exchange(QMainWindow):
             while num1<=num:
                 path = self.tableWidget.item(num1, 1).text()
                 formatto = self.tableWidget.item(num1, 2).text()
-                q = path.find('.', -5, -1)
-                while path[q] != "/":
-                    q -= 1
-                filename = path[q + 1:]
-                size = str(os.path.getsize(path))
+                print(path)
+                filepath,fullflname = os.path.split(path)
+                print(fullflname)
                 key = "123321"
                 f = open(path, 'rb')
                 myHash = hashlib.md5()
@@ -80,18 +80,17 @@ class Ui_file_exchange(QMainWindow):
                 print(md5)
                 #md5 = str(hash_code).lower()
 
-                head = {
+                data = {
                     "apikey": key,
-                    "size": size,
-                    "filename": filename,
+                    "filename": fullflname,
                     "md5":md5,
                     "formatto":formatto
                 }
-                print(head)
-                head=json.dumps(head)
+                print(data)
+                #data=json.dumps(data)
                 #back=0
-
-                back=sendfile1("localhost",11170,head,path)
+                url="http://127.0.0.1:19150/upload/exchange"
+                back=sendfile(url,data,path,"ex")
                 if (back == 0):
                     print("ok")
                     self.tableWidget.setItem(num1, 3, QTableWidgetItem("上传完成"))
