@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="576d10f9-db3f-49d2-9486-f27562b3f997" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/UnitAi-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UnitAi-Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,14 +32,19 @@
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="更新" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Program Files/python/python.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -60,19 +67,7 @@
       <recent name="E:\UnitAi-Project\client\原始图形界面文件" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.欧拉质数筛">
+  <component name="RunManager" selected="Python.get_img">
     <configuration name="欧拉质数筛" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="UnitAi-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,27 +133,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="adbtool_wechat" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="UnitAi-Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/adbtool_wechat.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="file-exchage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="UnitAi-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,6 +146,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client/file-exchage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_img" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test/get_img" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/get_img/get_img.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -291,24 +286,36 @@
     <list>
       <item itemvalue="Python.Chooseserver" />
       <item itemvalue="Python.Main" />
+      <item itemvalue="Python.欧拉质数筛" />
+      <item itemvalue="Python.file-exchage" />
+      <item itemvalue="Python.get_img" />
       <item itemvalue="Python.login" />
+      <item itemvalue="Python.posttest" />
+      <item itemvalue="Python.server" />
       <item itemvalue="Python.server_login" />
       <item itemvalue="Python.sqlini" />
-      <item itemvalue="Python.server" />
-      <item itemvalue="Python.posttest" />
-      <item itemvalue="Python.adbtool_wechat" />
-      <item itemvalue="Python.file-exchage" />
-      <item itemvalue="Python.欧拉质数筛" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.get_img" />
         <item itemvalue="Python.file-exchage" />
         <item itemvalue="Python.server" />
         <item itemvalue="Python.欧拉质数筛" />
         <item itemvalue="Python.posttest" />
-        <item itemvalue="Python.adbtool_wechat" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -419,6 +426,36 @@
     <MESSAGE value="123" />
     <option name="LAST_COMMIT_MESSAGE" value="123" />
   </component>
+  <component name="WindowStateProjectService">
+    <state width="1659" height="183" key="GridCell.Tab.0.bottom" timestamp="1579705833041">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="183" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1579705833041" />
+    <state width="1659" height="183" key="GridCell.Tab.0.center" timestamp="1579705833041">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="183" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1579705833041" />
+    <state width="1659" height="183" key="GridCell.Tab.0.left" timestamp="1579705833041">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="183" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1579705833041" />
+    <state width="1659" height="183" key="GridCell.Tab.0.right" timestamp="1579705833041">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="183" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1579705833041" />
+    <state x="341" y="147" key="SettingsEditor" timestamp="1579514202390">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="341" y="147" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1579514202390" />
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1579578470346">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1579578470346" />
+    <state x="529" y="296" key="git4idea.merge.GitPullDialog" timestamp="1579588286608">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="529" y="296" key="git4idea.merge.GitPullDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579588286608" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -469,14 +506,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/UnitAi_Project$posttest.coverage" NAME="posttest Coverage Results" MODIFIED="1574555119103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/client/测试/文件在线转换api测试(完成修正，待验证)" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$pytest_in_out_py.coverage" NAME="pytest in out.py Coverage Results" MODIFIED="1574555146895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_api_Easytest" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$post_def.coverage" NAME="post_def Coverage Results" MODIFIED="1574554782326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python_api_Easytest" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$pytest_in_posttest_py.coverage" NAME="pytest in posttest.py Coverage Results" MODIFIED="1574555204533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newserver" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$posttest__1_.coverage" NAME="posttest (1) Coverage Results" MODIFIED="1574556534038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newserver" />
-    <SUITE FILE_PATH="coverage/UnitAi_Project$test.coverage" NAME="test Coverage Results" MODIFIED="1574556354249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newserver" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
