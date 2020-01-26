@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="576d10f9-db3f-49d2-9486-f27562b3f997" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/UnitAi-Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/UnitAi-Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/无边框UI/UI_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/无边框UI/UnFrameStyle.qss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +66,7 @@
       <recent name="E:\UnitAi-Project\client\原始图形界面文件" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.get_img">
+  <component name="RunManager" selected="Python.UI_test">
     <configuration name="欧拉质数筛" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="UnitAi-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,6 +132,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="UI_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="UnitAi-Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test/无边框UI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/无边框UI/UI_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="file-exchage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="UnitAi-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -189,27 +209,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/client/login.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="posttest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="UnitAi-Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Newserver" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Newserver/posttest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -286,22 +285,22 @@
     <list>
       <item itemvalue="Python.Chooseserver" />
       <item itemvalue="Python.Main" />
+      <item itemvalue="Python.login" />
+      <item itemvalue="Python.server_login" />
+      <item itemvalue="Python.sqlini" />
       <item itemvalue="Python.欧拉质数筛" />
       <item itemvalue="Python.file-exchage" />
       <item itemvalue="Python.get_img" />
-      <item itemvalue="Python.login" />
-      <item itemvalue="Python.posttest" />
       <item itemvalue="Python.server" />
-      <item itemvalue="Python.server_login" />
-      <item itemvalue="Python.sqlini" />
+      <item itemvalue="Python.UI_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.UI_test" />
         <item itemvalue="Python.get_img" />
         <item itemvalue="Python.file-exchage" />
         <item itemvalue="Python.server" />
         <item itemvalue="Python.欧拉质数筛" />
-        <item itemvalue="Python.posttest" />
       </list>
     </recent_temporary>
   </component>
@@ -427,34 +426,38 @@
     <option name="LAST_COMMIT_MESSAGE" value="123" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1659" height="183" key="GridCell.Tab.0.bottom" timestamp="1579705833041">
+    <state x="552" y="308" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580027871738">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="183" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1579705833041" />
-    <state width="1659" height="183" key="GridCell.Tab.0.center" timestamp="1579705833041">
+    <state x="552" y="308" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1580027871738" />
+    <state width="1659" height="102" key="GridCell.Tab.0.bottom" timestamp="1580027933906">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="183" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1579705833041" />
-    <state width="1659" height="183" key="GridCell.Tab.0.left" timestamp="1579705833041">
+    <state width="1659" height="102" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1580027933906" />
+    <state width="1659" height="102" key="GridCell.Tab.0.center" timestamp="1580027933906">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="183" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1579705833041" />
-    <state width="1659" height="183" key="GridCell.Tab.0.right" timestamp="1579705833041">
+    <state width="1659" height="102" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1580027933906" />
+    <state width="1659" height="102" key="GridCell.Tab.0.left" timestamp="1580027933906">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state width="1659" height="183" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1579705833041" />
+    <state width="1659" height="102" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1580027933906" />
+    <state width="1659" height="102" key="GridCell.Tab.0.right" timestamp="1580027933906">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1659" height="102" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1580027933906" />
     <state x="341" y="147" key="SettingsEditor" timestamp="1579514202390">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="341" y="147" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1579514202390" />
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1579578470346">
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2" timestamp="1580028005826">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1579578470346" />
-    <state x="529" y="296" key="git4idea.merge.GitPullDialog" timestamp="1579588286608">
+    <state x="432" y="238" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1580028005826" />
+    <state x="529" y="296" key="git4idea.merge.GitPullDialog" timestamp="1580027991517">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="529" y="296" key="git4idea.merge.GitPullDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1579588286608" />
+    <state x="529" y="296" key="git4idea.merge.GitPullDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1580027991517" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
