@@ -27,11 +27,7 @@ def load_json_data():
             py = dic["py"]
             #print(dic)
     else:
-        data = """{
-  "min": 1,
-  "max": 50,
-  "py": 0
-}"""
+        data = '{"min": 1, "max": 50, "py": 0}'
         file = open('./data.json', 'w')
         file.write(data)
 
