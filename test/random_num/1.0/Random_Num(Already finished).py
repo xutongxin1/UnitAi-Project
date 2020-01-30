@@ -1,21 +1,41 @@
 # -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'Random_Num.ui'
-#
 # Created by: PyQt5 UI code generator 5.13.0
-#
-# WARNING! All changes made in this file will be lost!
 
 
-import sys, random, time
+
+import sys, random, time, os, json
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget
 from PyQt5.QtCore import QThread, pyqtSignal
 
-max = 50
+max = 501
 min = 1
 py = 0
 i = 20
+dic = 0
+
+def load_json_data():
+    global min, max, py, dic
+    if os.path.exists("./data.json"):
+        with open("./data.json", 'r', encoding='utf-8') as f:
+            #print(f)
+            js = f.read()
+            dic = json.loads(js.replace("'", "\""))
+            #dic = json.load(f)
+            max = dic["max"]
+            min = dic["min"]
+            py = dic["py"]
+            #print(dic)
+    else:
+        data = """{
+  "min": 1,
+  "max": 50,
+  "py": 0
+}"""
+        file = open('./data.json', 'w')
+        file.write(data)
+
+
 class MyThread(QThread):
     signal = pyqtSignal(str)
     def __init__(self, max, min, py):
@@ -58,18 +78,30 @@ class Ui_Form(QWidget):
     def Min(self):
         global min
         min = self.spinBoxMinimum.value()
-        # print(self.spinBoxMinimum.value())
+        dic["min"] = min
+        with open("./data.json", mode='r+', encoding='utf-8') as f:
+            f.write(" ")
+            f.write(str(dic))
 
     def Max(self):
         global max
         max = self.spinBoxMaximum.value()
+        dic["max"] = max
+        with open("./data.json", mode='r+', encoding='utf-8') as f:
+            f.write(" ")
+            f.write(str(dic))
 
     def pychanged(self):
         global py
         py = self.spinBoxPY.value()
+        dic["py"] = py
+        with open("./data.json", mode='r+', encoding='utf-8') as f:
+            f.write(" ")
+            f.write(str(dic))
 
     def setupUi(self, Form):
         global max, min, py
+        load_json_data()
 
         Form.setObjectName("Form")
         Form.resize(150, 230)
@@ -97,21 +129,21 @@ class Ui_Form(QWidget):
         self.spinBoxMinimum = QtWidgets.QSpinBox(Form)
         self.spinBoxMinimum.setGeometry(QtCore.QRect(20, 200, 42, 22))
         self.spinBoxMinimum.setObjectName("spinBoxMinimum")
-        self.spinBoxMinimum.setValue(1)
-        min = self.spinBoxMinimum.value()
+        self.spinBoxMinimum.setValue(min)
+        #min = self.spinBoxMinimum.value()
 
         self.spinBoxMaximum = QtWidgets.QSpinBox(Form)
         self.spinBoxMaximum.setGeometry(QtCore.QRect(80, 200, 42, 22))
         self.spinBoxMaximum.setObjectName("spinBoxMaximum")
-        self.spinBoxMaximum.setValue(50)
-        max = self.spinBoxMaximum.value()
+        self.spinBoxMaximum.setValue(max)
+        #max = self.spinBoxMaximum.value()
         # print(self.spinBoxMaximum.value())
 
         self.spinBoxPY = QtWidgets.QSpinBox(Form)
         self.spinBoxPY.setGeometry(QtCore.QRect(200, 70, 51, 21))
         self.spinBoxPY.setObjectName("spinBoxPY")
-        self.spinBoxPY.setValue(0)
-        py = self.spinBoxPY.value()
+        self.spinBoxPY.setValue(py)
+        #py = self.spinBoxPY.value()
 
         self.label_2 = QtWidgets.QLabel(Form)
         self.label_2.setGeometry(QtCore.QRect(200, 30, 61, 21))
