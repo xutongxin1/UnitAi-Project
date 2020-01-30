@@ -26,10 +26,12 @@ def load_json_data():
             min = dic["min"]
             py = dic["py"]
             #print(dic)
+            f.close()
     else:
         data = '{"min": 1, "max": 50, "py": 0}'
         file = open('./data.json', 'w')
         file.write(data)
+        file.close()
 
 
 class MyThread(QThread):
@@ -79,6 +81,7 @@ class Ui_Form(QWidget):
             f.seek(0)
             f.truncate()
             f.write(str(dic))
+            f.close()
 
     def Max(self):
         global max
@@ -88,6 +91,7 @@ class Ui_Form(QWidget):
             f.seek(0)
             f.truncate()
             f.write(str(dic))
+            f.close()
 
     def pychanged(self):
         global py
@@ -97,6 +101,7 @@ class Ui_Form(QWidget):
             f.seek(0)
             f.truncate()
             f.write(str(dic))
+            f.close()
 
     def setupUi(self, Form):
         global max, min, py
