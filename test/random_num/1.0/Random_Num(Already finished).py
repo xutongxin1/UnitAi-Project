@@ -80,7 +80,8 @@ class Ui_Form(QWidget):
         min = self.spinBoxMinimum.value()
         dic["min"] = min
         with open("./data.json", mode='r+', encoding='utf-8') as f:
-            f.write(" ")
+            f.seek(0)
+            f.truncate()
             f.write(str(dic))
 
     def Max(self):
@@ -88,7 +89,8 @@ class Ui_Form(QWidget):
         max = self.spinBoxMaximum.value()
         dic["max"] = max
         with open("./data.json", mode='r+', encoding='utf-8') as f:
-            f.write(" ")
+            f.seek(0)
+            f.truncate()
             f.write(str(dic))
 
     def pychanged(self):
@@ -96,7 +98,8 @@ class Ui_Form(QWidget):
         py = self.spinBoxPY.value()
         dic["py"] = py
         with open("./data.json", mode='r+', encoding='utf-8') as f:
-            f.write(" ")
+            f.seek(0)
+            f.truncate()
             f.write(str(dic))
 
     def setupUi(self, Form):
