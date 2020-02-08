@@ -9,6 +9,9 @@ def hash(word):
     sha256.update(word.encode('utf-8'))
     res = sha256.hexdigest()
     return res
+
+def connectcheck():
+
 def login(acc,pd):
     curpath = os.path.dirname(os.path.realpath(__file__))
     cfgpath = os.path.join(curpath, "config/user.ini")
@@ -88,7 +91,7 @@ def login_old(acc,pd):
 #发送文件函数
 #标准文件发送函数(带检查，全加载式检查文件，不带进度，适用于10m以下）
 def sendfile(url,data,whfile,type):
-    header = {"Content-Type": "multipart/form-data"}
+    #header = {"Content-Type": "multipart/form-data"}
     file={type: open(whfile,"rb")}
     req=requests.post(url,data,files=file)
     print(req.status_code)

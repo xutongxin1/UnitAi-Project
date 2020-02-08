@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="576d10f9-db3f-49d2-9486-f27562b3f997" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Newserver/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Newserver/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/UIfile/chooseserver.no.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/file-exchage.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/file-exchage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/send.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/send.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.欧拉质数筛">
+  <component name="RunManager" selected="Python.Main">
     <configuration name="欧拉质数筛" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="UnitAi-Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -302,8 +306,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.file-exchage" />
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.file-exchage" />
         <item itemvalue="Python.欧拉质数筛" />
         <item itemvalue="Python.posttest" />
         <item itemvalue="Python.adbtool_wechat" />

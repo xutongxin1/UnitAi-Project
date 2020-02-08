@@ -81,9 +81,10 @@ class Ui_file_exchange(QMainWindow):
                 #md5 = str(hash_code).lower()
 
                 data = {
+                    "order":True,
                     "apikey": key,
                     "filename": fullflname,
-                    "md5":md5,
+                    "md5":"123",
                     "formatto":formatto
                 }
                 print(data)

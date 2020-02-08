@@ -13,7 +13,7 @@ app.config['UPLOADED_EXCHANGE_DEST']="E:/UnitAi-Project/Newserver/upload"
 exchangeupload = UploadSet('exchange', ALL)
 configure_uploads(app, exchangeupload)
 patch_request_class(app)
-path=os.getcwd()
+porject_path=os.getcwd()
 
 def hash(word):
     sha256 = hashlib.sha256()
@@ -112,8 +112,26 @@ def upload():
         if "filename" in result.keys():
             filename=result["filename"]
             print(filename)
-            os.rename(path+"/upload/"+filename_past,path+"/upload/"+filename)
-
+            path=porject_path + "/upload/" + filename
+            if os.path.exists(path):
+                os.remove(path)
+            os.rename(porject_path+"/upload/"+filename_past,path)
+            if "order" in result.keys():
+                order=1
+            else:
+                order=0
+            if "md5" in result.keys() and (os.path.getsize(path)<=102400 or order==1):
+                f = open(path, 'rb')
+                myHash = hashlib.md5()
+                while True:
+                    d = f.read(8096)
+                    if not d:
+                        break
+                    myHash.update(d)
+                md5 = myHash.hexdigest()
+                f.close()
+                if md5!=result["md5"]:
+                    return abort(400)
             return {"code": "0"}
     else:
         abort(401)
