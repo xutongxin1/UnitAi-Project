@@ -9,11 +9,15 @@
 
 import sys
 from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtWidgets import QApplication, QWidget
-from PyQt5.QtGui import QPixmap, QPainter
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
 
 
 class Ui_Form(QWidget):
+    _startPos = None
+    _endPos = None
+    _isTracking = False
     def __init__(self):
         super(Ui_Form,self).__init__()
         self.setupUi(self)
@@ -25,10 +29,14 @@ class Ui_Form(QWidget):
         pixmap = QPixmap("./bg.jpg")  # 换成自己的图片的相对路径
         painter.drawPixmap(self.rect(), pixmap)
 
+    def off(self):
+        exit()
+
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(1063, 826)
         Form.setMinimumSize(QtCore.QSize(1024, 0))
+        self.setWindowFlags(Qt.FramelessWindowHint)
 
         # Form.setStyleSheet("background-image: url(:bg.jpg);")
 
@@ -132,7 +140,24 @@ class Ui_Form(QWidget):
         self.verticalLayout.addLayout(self.horizontalLayout_5)
 
         self.retranslateUi(Form)
+        self.off.clicked.connect(lambda: self.off())
         QtCore.QMetaObject.connectSlotsByName(Form)
+
+
+    def mouseMoveEvent(self, e: QMouseEvent):  # 重写移动事件
+        self._endPos = e.pos() - self._startPos
+        self.move(self.pos() + self._endPos)
+
+    def mousePressEvent(self, e: QMouseEvent):
+        if e.button() == Qt.LeftButton:
+            self._isTracking = True
+            self._startPos = QPoint(e.x(), e.y())
+
+    def mouseReleaseEvent(self, e: QMouseEvent):
+        if e.button() == Qt.LeftButton:
+            self._isTracking = False
+            self._startPos = None
+            self._endPos = None
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
