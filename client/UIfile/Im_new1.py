@@ -7,10 +7,17 @@
 # WARNING! All changes made in this file will be lost!
 
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+import sys
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import QApplication, QWidget
 
 
-class Ui_Form(object):
+class Ui_Form(QWidget):
+    def __init__(self):
+        super(Ui_Form,self).__init__()
+        self.setupUi(self)
+        self.retranslateUi(self)
+
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(1063, 826)
@@ -123,3 +130,10 @@ class Ui_Form(object):
         self.username.setText(_translate("Form", "1233333"))
         self.send.setText(_translate("Form", "发送"))
         self.attach1.setText(_translate("Form", "bak"))
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    w = Ui_Form()
+    w.show()
+    sys.exit(app.exec_())

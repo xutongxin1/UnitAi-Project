@@ -19,6 +19,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/bg.jpg);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -302,6 +305,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="picture.qrc"/>
+ </resources>
  <connections/>
 </ui>
