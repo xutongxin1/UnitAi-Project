@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import  QApplication, QPushButton, QMenu,QLineEdit,QMainWindow,QLabel
+from PyQt5.QtWidgets import  QApplication, QPushButton, QMenu,QLineEdit,QMainWindow,QLabel,QWidget
 from PyQt5.QtCore import QCoreApplication,QTimer,QThread,pyqtSignal
 from PyQt5.QtGui import QIcon, QPainter, QPixmap,QPalette,QBrush
 import sys
@@ -12,91 +12,139 @@ import sys
 #以下为导入自定义函数
 #工具箱
 
-class Ui_IM(QMainWindow):
+class Ui_IM(QWidget):
 
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+    def setupUi(self,Form):
+        Form.setObjectName("Form")
+        Form.resize(1063, 826)
+        Form.setMinimumSize(QtCore.QSize(1024, 0))
+        Form.setStyleSheet("#Form{border-image:url(login.jpg);}")
+        #Form.setStyleSheet("#Form{background-color:yellow}")
+        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.Head = QtWidgets.QPushButton(Form)
+        self.Head.setMinimumSize(QtCore.QSize(50, 50))
+        self.Head.setText("")
+        self.Head.setObjectName("Head")
+        self.horizontalLayout.addWidget(self.Head)
+        self.username = QtWidgets.QLabel(Form)
+        self.username.setObjectName("username")
+        self.horizontalLayout.addWidget(self.username)
+        self.lineEdit = QtWidgets.QLineEdit(Form)
+        self.lineEdit.setMaximumSize(QtCore.QSize(155, 16777215))
+        self.lineEdit.setText("")
+        self.lineEdit.setObjectName("lineEdit")
+        self.horizontalLayout.addWidget(self.lineEdit)
+        self.horizontalLayout_6.addLayout(self.horizontalLayout)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        spacerItem = QtWidgets.QSpacerItem(150, 20, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem)
+        self.talkButton = QtWidgets.QPushButton(Form)
+        self.talkButton.setMinimumSize(QtCore.QSize(50, 50))
+        self.talkButton.setText("")
+        self.talkButton.setObjectName("talkButton")
+        self.horizontalLayout_2.addWidget(self.talkButton)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem1)
+        self.toolButton = QtWidgets.QPushButton(Form)
+        self.toolButton.setMinimumSize(QtCore.QSize(50, 50))
+        self.toolButton.setText("")
+        self.toolButton.setObjectName("toolButton")
+        self.horizontalLayout_2.addWidget(self.toolButton)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem2)
+        self.talkButton_3 = QtWidgets.QPushButton(Form)
+        self.talkButton_3.setMinimumSize(QtCore.QSize(50, 50))
+        self.talkButton_3.setText("")
+        self.talkButton_3.setObjectName("talkButton_3")
+        self.horizontalLayout_2.addWidget(self.talkButton_3)
+        self.horizontalLayout_3.addLayout(self.horizontalLayout_2)
+        spacerItem3 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem3)
+        self.minum = QtWidgets.QPushButton(Form)
+        self.minum.setMinimumSize(QtCore.QSize(40, 0))
+        self.minum.setText("")
+        self.minum.setObjectName("minum")
+        self.horizontalLayout_3.addWidget(self.minum)
+        self.max = QtWidgets.QPushButton(Form)
+        self.max.setMinimumSize(QtCore.QSize(40, 0))
+        self.max.setText("")
+        self.max.setObjectName("max")
+        self.horizontalLayout_3.addWidget(self.max)
+        self.off = QtWidgets.QPushButton(Form)
+        self.off.setMinimumSize(QtCore.QSize(40, 0))
+        self.off.setText("")
+        self.off.setObjectName("off")
+        self.horizontalLayout_3.addWidget(self.off)
+        self.horizontalLayout_6.addLayout(self.horizontalLayout_3)
+        self.verticalLayout.addLayout(self.horizontalLayout_6)
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setSizeConstraint(QtWidgets.QLayout.SetNoConstraint)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.textBrowser_2 = QtWidgets.QTextBrowser(Form)
+        self.textBrowser_2.setMinimumSize(QtCore.QSize(300, 0))
+        self.textBrowser_2.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.textBrowser_2.setObjectName("textBrowser_2")
+        self.horizontalLayout_5.addWidget(self.textBrowser_2)
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setObjectName("gridLayout")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.lineEdit_2 = QtWidgets.QLineEdit(Form)
+        self.lineEdit_2.setMinimumSize(QtCore.QSize(650, 191))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.horizontalLayout_4.addWidget(self.lineEdit_2)
+        self.send = QtWidgets.QPushButton(Form)
+        self.send.setMinimumSize(QtCore.QSize(50, 25))
+        self.send.setMaximumSize(QtCore.QSize(100, 50))
+        self.send.setObjectName("send")
+        self.horizontalLayout_4.addWidget(self.send)
+        self.gridLayout.addLayout(self.horizontalLayout_4, 2, 0, 1, 1)
+        self.attach1 = QtWidgets.QPushButton(Form)
+        self.attach1.setMinimumSize(QtCore.QSize(50, 50))
+        self.attach1.setMaximumSize(QtCore.QSize(50, 16777215))
+        self.attach1.setObjectName("attach1")
+        self.gridLayout.addWidget(self.attach1, 1, 0, 1, 1)
+        self.textBrowser = QtWidgets.QTextBrowser(Form)
+        self.textBrowser.setMinimumSize(QtCore.QSize(730, 480))
+        self.textBrowser.setObjectName("textBrowser")
+        self.gridLayout.addWidget(self.textBrowser, 0, 0, 1, 1)
+        self.horizontalLayout_5.addLayout(self.gridLayout)
+        self.verticalLayout.addLayout(self.horizontalLayout_5)
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
 
 
-    def setupUi(self, Dialog):
-                Dialog.setObjectName("Dialog")
-                Dialog.resize(1024, 657)
-                Dialog.setStyleSheet("")
-                self.head = QtWidgets.QLabel(Dialog)
-                self.head.setGeometry(QtCore.QRect(0, 0, 111, 61))
-                self.head.setText("")
-                self.head.setObjectName("head")
-                self.account = QtWidgets.QLabel(Dialog)
-                self.account.setGeometry(QtCore.QRect(123, 21, 101, 41))
-                self.account.setStyleSheet("font: 12pt ;\n"
-                                           "color: rgb(102, 204, 255);")
-                self.account.setText("")
-                self.account.setObjectName("account")
-                self.label_2 = QtWidgets.QLabel(Dialog)
-                self.label_2.setGeometry(QtCore.QRect(130, 60, 891, 551))
-                self.label_2.setStyleSheet("background-color: rgb(255, 255, 255);")
-                self.label_2.setText("")
-                self.label_2.setObjectName("label_2")
-                self.lineEdit = QtWidgets.QLineEdit(Dialog)
-                self.lineEdit.setGeometry(QtCore.QRect(212, 610, 731, 48))
-                self.lineEdit.setObjectName("lineEdit")
-                self.send = QtWidgets.QPushButton(Dialog)
-                self.send.setGeometry(QtCore.QRect(943, 610, 82, 51))
-                self.send.setObjectName("send")
-                self.voice = QtWidgets.QPushButton(Dialog)
-                self.voice.setGeometry(QtCore.QRect(130, 610, 82, 51))
-                self.voice.setText("")
-                self.voice.setObjectName("voice")
-                self.workmode = QtWidgets.QPushButton(Dialog)
-                self.workmode.setGeometry(QtCore.QRect(0, 60, 131, 51))
-                self.workmode.setObjectName("workmode")
-                self.livemode = QtWidgets.QPushButton(Dialog)
-                self.livemode.setGeometry(QtCore.QRect(0, 110, 131, 51))
-                self.livemode.setObjectName("livemode")
-                self.setting = QtWidgets.QPushButton(Dialog)
-                self.setting.setGeometry(QtCore.QRect(0, 735, 131, 34))
-                self.setting.setObjectName("setting")
-                self.function1 = QtWidgets.QPushButton(Dialog)
-                self.function1.setGeometry(QtCore.QRect(340, 0, 112, 61))
-                self.function1.setObjectName("function1")
-                self.function2 = QtWidgets.QPushButton(Dialog)
-                self.function2.setGeometry(QtCore.QRect(450, 0, 112, 61))
-                self.function2.setObjectName("function2")
-                self.function3 = QtWidgets.QPushButton(Dialog)
-                self.function3.setGeometry(QtCore.QRect(560, 0, 112, 61))
-                self.function3.setObjectName("function3")
-                self.function4 = QtWidgets.QPushButton(Dialog)
-                self.function4.setGeometry(QtCore.QRect(670, 0, 112, 61))
-                self.function4.setObjectName("function4")
-                self.more = QtWidgets.QPushButton(Dialog)
-                self.more.setGeometry(QtCore.QRect(780, 0, 112, 61))
-                self.more.setObjectName("more")
 
-                self.retranslateUi(Dialog)
-                QtCore.QMetaObject.connectSlotsByName(Dialog)
-                #完成第一阶段初始化
-                #self.getimform()
+        #以上都有可能被修改，请勿把代码放于此上
 
 
-
-
-
-                 #完成第二阶段初始化
-                #self.show()
-
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.send.setText(_translate("Dialog", "发送"))
-        self.workmode.setText(_translate("Dialog", "工作模式"))
-        self.livemode.setText(_translate("Dialog", "实例模式"))
-        self.setting.setText(_translate("Dialog", "PushButton"))
-        self.function1.setText(_translate("Dialog", "文档转换"))
-        self.function2.setText(_translate("Dialog", "PushButton"))
-        self.function3.setText(_translate("Dialog", "PushButton"))
-        self.function4.setText(_translate("Dialog", "PushButton"))
-        self.more.setText(_translate("Dialog", "更多工具"))
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.username.setText(_translate("Form", "1233333"))
+        self.send.setText(_translate("Form", "发送"))
+        self.attach1.setText(_translate("Form", "bak"))
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':#调试用启动器
