@@ -7,6 +7,7 @@ for root, dirs, files in os.walk("D:\\"):
         path = os.path.normcase(path)
         if file == "_conda.exe":
             search_files.append(path)
+
 print(search_files)
 path = str(search_files)[2:-14]
 path = path.replace("\\\\", "\\")
