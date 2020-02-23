@@ -98,11 +98,11 @@ class Ui_Form(QWidget):
         self.max.setText("")
         self.max.setObjectName("max")
         self.horizontalLayout_3.addWidget(self.max)
-        self.off = QtWidgets.QPushButton(Form)
-        self.off.setMinimumSize(QtCore.QSize(40, 0))
-        self.off.setText("")
-        self.off.setObjectName("off")
-        self.horizontalLayout_3.addWidget(self.off)
+        self.offbutton = QtWidgets.QPushButton(Form)
+        self.offbutton.setMinimumSize(QtCore.QSize(40, 0))
+        self.offbutton.setText("")
+        self.offbutton.setObjectName("off")
+        self.horizontalLayout_3.addWidget(self.offbutton)
         self.horizontalLayout_6.addLayout(self.horizontalLayout_3)
         self.verticalLayout.addLayout(self.horizontalLayout_6)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
@@ -140,7 +140,7 @@ class Ui_Form(QWidget):
         self.verticalLayout.addLayout(self.horizontalLayout_5)
 
         self.retranslateUi(Form)
-        self.off.clicked.connect(lambda: self.off())
+        self.offbutton.clicked.connect(lambda: self.off())
         QtCore.QMetaObject.connectSlotsByName(Form)
 
 
