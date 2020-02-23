@@ -1,10 +1,10 @@
 # code:utf-8
-Version="0.0.1b"
+Version = "0.0.1b"
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QPushButton, QMenu, QLineEdit, QMainWindow, QDialog, QWidget
 from PyQt5.QtCore import QCoreApplication, QTimer, QThread, pyqtSignal
 from PyQt5.QtGui import QIcon, QPainter, QPixmap, QPalette, QBrush
-import sys, os, configparser,ctypes
+import sys, os, configparser, ctypes
 
 # 基本五大包导入
 
@@ -27,9 +27,9 @@ from send import login
 # 全局变量
 imgpath = "./images/login.jpg"
 
-loginmode = config("acc", "loginmode")
-acc = config("acc", "acc")
-pd = config("acc", "pd")
+loginmode = config("u", "acc", "loginmode")
+acc = config("u", "acc", "acc")
+pd = config("u", "acc", "pd")
 
 op = QtWidgets.QGraphicsOpacityEffect()
 op.setOpacity(0.5)

@@ -3,6 +3,7 @@ Version="0.0.1b"
 import socket,requests,json
 import hashlib,time,os,configparser
 from threading import Thread
+from config import config
 #登录中枢
 def hash(word):
     sha256 = hashlib.sha256()
@@ -11,16 +12,18 @@ def hash(word):
     return res
 
 def connectcheck():
+    add = config("u", "server", "add")
+    port = config("u", "server", "port")
+    url = "http://" + add + ':' + port + "/connectcheck"
+    req = requests.get(url)
+    result = json.loads(req.text)
+    return result["code"],result["version"]
 
 def login(acc,pd):
-    curpath = os.path.dirname(os.path.realpath(__file__))
-    cfgpath = os.path.join(curpath, "config/user.ini")
-    conf = configparser.ConfigParser()
-    conf.read(cfgpath, encoding="utf-8")
-    add = conf.get("server", "add")
-    port = conf.get("server", "port")
+    add = config("u","server", "add")
+    port = config("u","server", "port")
     #loginmode = conf.get("acc", "loginmode")
-    pd = conf.get("acc", "pd")
+    pd = config("u","acc", "pd")
     headers = {'Content-Type': 'application/json'}
     url="http://"+add+':'+port+"/login"
     print(url)

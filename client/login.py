@@ -32,9 +32,9 @@ from config import config
 # import Im
 # from Main import loginsuccess
 
-loginmode=config("acc","loginmode")
-acc=config("acc","acc")
-pd=config("acc","pd")
+loginmode=config("u","acc","loginmode")
+acc=config("u","acc","acc")
+pd=config("u","acc","pd")
 
 
 class Ui_login(QWidget):

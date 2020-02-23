@@ -14,8 +14,8 @@ from send import login
 from config import config
 
 
-ipset=config("server","add")
-portset=config("server","port")
+ipset=config("u","server","add")
+portset=config("u","server","port")
 
 class Ui_chooseserver(QWidget):
     def __init__(self):
