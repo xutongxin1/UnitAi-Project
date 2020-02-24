@@ -1,6 +1,6 @@
 import json, requests
 
-url = 'http://127.0.0.1:19150/test'
+url = 'http://127.0.0.1:19150/download/exchange'
 data = {
     "filename": "1.ppt"
 }
@@ -10,5 +10,6 @@ headers = {
 req = requests.post(url, json.dumps(data), headers=headers)
 # result = json.loads(req.text)
 result = req.headers
-with open("123.zip", 'wb') as f:
+#print(req.content)
+with open("E:/UnitAi-Project/Newserver/test.ppt", 'wb') as f:
     f.write(req.content)

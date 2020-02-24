@@ -33,8 +33,7 @@ def exchangefile(rec):
             # print("Ok")
             path = prpath.replace("\\", "/") + "/download/exchange"
             print(path)
-        response = make_response(
-            send_from_directory(path, name, as_attachment=True))
+        response = send_from_directory(path, name, as_attachment=True)
         return response
     # else:
     # return abort(301)
