@@ -10,7 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication,QWidget,QMessageBox
 import sys,os,configparser
-from send import login,connectcheck
+from send import login,ConnectTest
 from config import config
 
 
@@ -23,7 +23,8 @@ class Ui_chooseserver(QWidget):
         self.setupUi(self)
 
     def testserver(self):
-        serverversion=connectcheck()
+        serverversion=ConnectTest()
+        print(serverversion)
         if serverversion!=404:
             print(serverversion)
             reply = QMessageBox.information(self,

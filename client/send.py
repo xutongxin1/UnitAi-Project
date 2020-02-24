@@ -14,14 +14,14 @@ def hash(word):
     return res
 
 
-def connectcheck():
+def ConnectTest():
     add = config("u", "server", "add")
     port = config("u", "server", "port")
-    url = "http://" + add + ':' + port + "/connectcheck"
+    url = "http://" + add + ':' + port + "/ConnectTest"
     try:
         req = requests.get(url, timeout=3)
         result = json.loads(req.text)
-        return result["version"]
+        return result["Version"]
     except requests.exceptions.RequestException:
         return 404
 

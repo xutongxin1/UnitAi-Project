@@ -167,6 +167,7 @@ if __name__ == '__main__':
     logindef = logindef()
     loginapp.setWindowTitle("登录")
     chooseserverapp = chooseserverWindow()
+    chooseserverapp.setWindowTitle("服务器测试")
     lo_textpassword = loginapp.main_ui.textpassword
     lo_remember = loginapp.main_ui.remember
     lo_Auto = loginapp.main_ui.Auto

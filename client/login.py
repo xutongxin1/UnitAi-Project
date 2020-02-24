@@ -174,4 +174,5 @@ if __name__ == '__main__':  # 调试用启动器
     QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)
     loginapp = QApplication(sys.argv)
     ex = Ui_login()
+    ex.show()
     sys.exit(loginapp.exec_())
