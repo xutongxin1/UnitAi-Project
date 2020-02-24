@@ -1,6 +1,6 @@
 # code:utf-8
 from flask import Flask, redirect, url_for, session, request, send_from_directory, abort, make_response
-import json, os, hashlib, time
+import json, os, hashlib, time,shutil
 from flask_uploads import UploadSet, configure_uploads, ALL, patch_request_class
 
 # from osdef import isHavefile
@@ -13,7 +13,7 @@ app.config['UPLOADED_EXCHANGE_DEST'] = "E:/UnitAi-Project/Newserver/upload"
 exchangeupload = UploadSet('exchange', ALL)
 configure_uploads(app, exchangeupload)
 patch_request_class(app)
-porject_path = os.getcwd()
+porject_path = "E:/UnitAi-Project/Newserver"
 
 
 def hash(word):
@@ -133,11 +133,14 @@ def upload():
                     myHash.update(d)
                 md5 = myHash.hexdigest()
                 f.close()
+                print(md5)
                 if md5 != result["md5"]:
                     return abort(400)
+            shutil.move(path, "E:/UnitAi-Project/Newserver/download/exchange")   # TODO(xtx): 测试用
             return {"code": "0"}
     else:
         abort(401)
+
     # file_url = exchangeupload.url(filename)
 
 

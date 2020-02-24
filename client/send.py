@@ -4,7 +4,7 @@ import socket, requests, json
 import hashlib, time, os, configparser
 from threading import Thread
 from config import config
-
+headers = {'Content-Type': 'application/json'}
 
 # 登录中枢
 def hash(word):
@@ -13,7 +13,17 @@ def hash(word):
     res = sha256.hexdigest()
     return res
 
+def download(url,data):
 
+    try:
+        req=requests.post(url,json.dumps(data), headers=headers, timeout=3)
+    except requests.exceptions.RequestException:
+        return 404
+
+    if req.status_code==501:
+        return 501
+    else:
+        return req.content
 def ConnectTest():
     add = config("u", "server", "add")
     port = config("u", "server", "port")
@@ -31,7 +41,6 @@ def login(acc, pd):
     port = config("u", "server", "port")
     # loginmode = conf.get("acc", "loginmode")
     pd = config("u", "acc", "pd")
-    headers = {'Content-Type': 'application/json'}
     url = "http://" + add + ':' + port + "/login"
     print(url)
     pd = hash(pd)
@@ -112,7 +121,10 @@ def login_old(acc,pd):
 def sendfile(url, data, whfile, type):
     # header = {"Content-Type": "multipart/form-data"}
     file = {type: open(whfile, "rb")}
-    req = requests.post(url, data, files=file)
+    try:
+        req = requests.post(url, data, files=file, timeout=3)
+    except requests.exceptions.RequestException:
+        return 3
     print(req.status_code)
     if req.status_code == 200:
         return 0
@@ -120,8 +132,8 @@ def sendfile(url, data, whfile, type):
         return 1
     elif req.status_code == 400:
         return 2
-    elif req.status_code == 401:
-        return 3
+    elif req.status_code == 500:
+        return 4
 
 
 """

@@ -7,7 +7,7 @@ from PyQt5.QtGui import QIcon, QPainter, QPixmap, QPalette, QBrush
 import sys, os, socket, json, time, hashlib
 
 # 基本五大包导入
-from send import sendfile
+from send import sendfile,download
 
 num = 0
 
@@ -88,14 +88,14 @@ class Ui_file_exchange(QMainWindow):
                 "order": True,
                 "apikey": key,
                 "filename": fullflname,
-                "md5": "123",
+                "md5": md5,
                 "formatto": formatto
             }
             print(data)
             # data=json.dumps(data)
             # back=0
             url = "http://127.0.0.1:19150/upload/exchange"
-            back = sendfile(url, data, path, "ex")
+            back = int(sendfile(url, data, path, "ex"))
             if (back == 0):
                 print("ok")
                 self.tableWidget.setItem(num1, 3, QTableWidgetItem("上传完成"))
@@ -105,10 +105,50 @@ class Ui_file_exchange(QMainWindow):
             elif (back == 2):
                 print("Error")
                 self.tableWidget.setItem(num1, 3, QTableWidgetItem("上传错误"))
+                return
             elif (back == 3):
                 self.tableWidget.setItem(num1, 3, QTableWidgetItem("无法连接到服务器"))
                 return
+            elif (back == 4):
+                self.tableWidget.setItem(num1, 3, QTableWidgetItem("服务器错误"))
+                return
             num1 += 1
+        time.sleep(1)
+
+
+        num1=0
+        while num1 <= num:
+            path = self.tableWidget.item(num1, 1).text()
+            formatto = self.tableWidget.item(num1, 2).text()
+            filepath, fullflname = os.path.split(path)
+            (filename, extension) = os.path.splitext(fullflname)
+            #name = filename + "." + formatto # TODO(xtx): 后缀修改为了测试
+            name=fullflname
+            data = {
+                "apikey": "123321",
+                "filename": name,
+            }
+            n=1
+            while n<10:
+                result = download("http://127.0.0.1:19150/download/exchange", data)
+                if result == 404:
+                    self.tableWidget.setItem(num1, 3, QTableWidgetItem("无法连接到服务器"))
+                    break
+                elif result == 501:
+                    self.tableWidget.setItem(num1, 3, QTableWidgetItem("请稍后,第" + n + "次尝试"))
+                    time.sleep(2)
+                    n+=1
+                    pass
+                else:
+                    name = filename + "." + formatto
+                    name = filepath + "/" + name
+                    with open(name, 'wb') as f:
+                        f.write(result)
+                    self.tableWidget.setItem(num1, 3, QTableWidgetItem("完成转换"))
+                    break
+            num1+=1
+
+
 
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
