@@ -1,9 +1,9 @@
 # code:utf-8
 Version = "0.0.1b"
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QApplication, QPushButton, QMenu, QLineEdit, QMainWindow, QDialog, QWidget
-from PyQt5.QtCore import QCoreApplication, QTimer, QThread, pyqtSignal
-from PyQt5.QtGui import QIcon, QPainter, QPixmap, QPalette, QBrush
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
 import sys, os, configparser, ctypes
 
 # 基本五大包导入
@@ -25,8 +25,12 @@ from config import config
 from send import login
 
 # 全局变量
-imgpath = "./images/login.jpg"
+_startPos = None
+_endPos = None
+_isTracking = False
 
+login_imgpath = "./images/login.jpg"
+Im_imgpath = "./images/Im.jpg"
 loginmode = config("u", "acc", "loginmode")
 acc = config("u", "acc", "acc")
 pd = config("u", "acc", "pd")
@@ -47,7 +51,7 @@ class LoginWindow(QWidget):
     def paintEvent(self, event):  # set background_img
         painter = QPainter(self)
         painter.drawRect(self.rect())
-        pixmap = QPixmap(imgpath)  # 换成自己的图片的相对路径
+        pixmap = QPixmap(login_imgpath)  # 换成自己的图片的相对路径
         painter.drawPixmap(self.rect(), pixmap)
 
 
@@ -57,6 +61,28 @@ class ImWindow(QWidget):
 
         self.Im = Ui_IM()
         self.Im.setupUi(self)
+        self.setWindowFlags(Qt.FramelessWindowHint)  # 无边框
+
+    def paintEvent(self, event):  # set background_img
+        painter = QPainter(self)
+        painter.drawRect(self.rect())
+        pixmap = QPixmap(Im_imgpath)  # 换成自己的图片的相对路径
+        painter.drawPixmap(self.rect(), pixmap)
+
+    def mouseMoveEvent(self, e: QMouseEvent):  # 重写移动事件
+        self._endPos = e.pos() - self._startPos
+        self.move(self.pos() + self._endPos)
+
+    def mousePressEvent(self, e: QMouseEvent):
+        if e.button() == Qt.LeftButton:
+            self._isTracking = True
+            self._startPos = QPoint(e.x(), e.y())
+
+    def mouseReleaseEvent(self, e: QMouseEvent):
+        if e.button() == Qt.LeftButton:
+            self._isTracking = False
+            self._startPos = None
+            self._endPos = None
 
 
 class chooseserverWindow(QWidget):
@@ -75,7 +101,7 @@ class chooseserverWindow(QWidget):
 
 def Im_reload(acc):
     print(1)
-    Im_account = Imapp.Im.account
+    Im_account = Imapp.Im.username
     Im_account.setText(acc)
 
     if acc == "xutongxin":
@@ -101,10 +127,10 @@ class logindef():
     # Im事件回调
 
     def root(self):
-        global imgpath
+        global login_imgpath
         if (lo_textaccount.text() == "xutongxin"):
             loginapp.close()
-            imgpath = "./images/xlogin.jpg"
+            login_imgpath = "./images/xlogin.jpg"
             loginapp.show()
 
     def login1(self):
@@ -121,7 +147,7 @@ class logindef():
         elif (re == 2):
             loginButton.setEnabled(True)
             loginButton.setText("用户不存在")
-        elif (re == -1):
+        elif (re == 404):
             loginButton.setEnabled(True)
             loginButton.setText("服务器异常")
         else:

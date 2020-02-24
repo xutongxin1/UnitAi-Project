@@ -1,7 +1,7 @@
 # code:utf-8
 from flask import Flask, redirect, url_for, session, request, send_from_directory, abort, make_response
 import json, os, hashlib, time
-from flask_uploads import UploadSet, configure_uploads, ALL,patch_request_class
+from flask_uploads import UploadSet, configure_uploads, ALL, patch_request_class
 
 # from osdef import isHavefile
 
@@ -9,11 +9,12 @@ app = Flask(__name__)
 Version = "0.0.1b"
 app.config["SECRET_KEY"] = "renyizifuchuan"
 prpath = os.path.dirname(os.path.realpath(__file__))
-app.config['UPLOADED_EXCHANGE_DEST']="E:/UnitAi-Project/Newserver/upload"
+app.config['UPLOADED_EXCHANGE_DEST'] = "E:/UnitAi-Project/Newserver/upload"
 exchangeupload = UploadSet('exchange', ALL)
 configure_uploads(app, exchangeupload)
 patch_request_class(app)
-porject_path=os.getcwd()
+porject_path = os.getcwd()
+
 
 def hash(word):
     sha256 = hashlib.sha256()
@@ -29,14 +30,14 @@ def exchangefile(rec):
         print(rec["filename"])
         path = prpath + "/download/exchange/" + rec["filename"]
         if os.path.isfile(path):
-            #print("Ok")
+            # print("Ok")
             path = prpath.replace("\\", "/") + "/download/exchange"
             print(path)
         response = make_response(
             send_from_directory(path, name, as_attachment=True))
         return response
-    #else:
-        #return abort(301)
+    # else:
+    # return abort(301)
 
 
 @app.route('/login', methods=['POST'])
@@ -90,7 +91,9 @@ def test(filename):
 
 @app.route('/ConnectTest', methods=['GET'])
 def ConnectTest():
-    return Version
+    return {
+        "Version": Version
+    }
 
 
 @app.route('/download/<type>', methods=['POST'])
@@ -101,26 +104,27 @@ def download(type):
     # else:
     # abort(404)
 
+
 @app.route('/upload/exchange', methods=['POST'])
 def upload():
-    if request.files!=None:
+    if request.files != None:
         print(request.files)
         filename_past = exchangeupload.save(request.files["ex"])
         print(filename_past)
-        result=request.form.to_dict()
+        result = request.form.to_dict()
         print(type(result))
         if "filename" in result.keys():
-            filename=result["filename"]
+            filename = result["filename"]
             print(filename)
-            path=porject_path + "/upload/" + filename
+            path = porject_path + "/upload/" + filename
             if os.path.exists(path):
                 os.remove(path)
-            os.rename(porject_path+"/upload/"+filename_past,path)
+            os.rename(porject_path + "/upload/" + filename_past, path)
             if "order" in result.keys():
-                order=1
+                order = 1
             else:
-                order=0
-            if "md5" in result.keys() and (os.path.getsize(path)<=102400 or order==1):
+                order = 0
+            if "md5" in result.keys() and (os.path.getsize(path) <= 102400 or order == 1):
                 f = open(path, 'rb')
                 myHash = hashlib.md5()
                 while True:
@@ -130,12 +134,12 @@ def upload():
                     myHash.update(d)
                 md5 = myHash.hexdigest()
                 f.close()
-                if md5!=result["md5"]:
+                if md5 != result["md5"]:
                     return abort(400)
             return {"code": "0"}
     else:
         abort(401)
-    #file_url = exchangeupload.url(filename)
+    # file_url = exchangeupload.url(filename)
 
 
 if __name__ == '__main__':

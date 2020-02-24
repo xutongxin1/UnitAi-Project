@@ -14,7 +14,7 @@ conf1.read(cfgpath1, encoding="utf-8")
 
 
 def config(file, topic, name):
-    if file == "u"  or file=="user":
+    if file == "u" or file == "user":
         return conf.get(topic, name)
-    elif file == "d" :
+    elif file == "d":
         return conf1.get(topic, name)

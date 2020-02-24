@@ -10,7 +10,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication,QWidget,QMessageBox
 import sys,os,configparser
-from send import login
+from send import login,connectcheck
 from config import config
 
 
@@ -23,14 +23,14 @@ class Ui_chooseserver(QWidget):
         self.setupUi(self)
 
     def testserver(self):
-        try:
-            serverversion=login('ConnectTest',123)
+        serverversion=connectcheck()
+        if serverversion!=404:
             print(serverversion)
             reply = QMessageBox.information(self,
                                     "测试结果",
                                     "服务器版本："+serverversion,
                                     QMessageBox.Yes)
-        except:
+        else:
             reply = QMessageBox.information(self,
                                     "测试结果",
                                     "无法连接至服务器",
@@ -70,6 +70,7 @@ class Ui_chooseserver(QWidget):
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
+
         self.gridLayout.addWidget(self.comboBox, 0, 0, 1, 1)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
@@ -117,6 +118,7 @@ class Ui_chooseserver(QWidget):
         self.port.setGraphicsEffect(op)
         self.port.setText(portset)
         self.ip.setText(ipset)
+        self.comboBox.setHidden(True)
 
         #按键绑定
         self.test.clicked.connect(self.testserver)

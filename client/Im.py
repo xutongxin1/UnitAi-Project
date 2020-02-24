@@ -1,28 +1,41 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import  QApplication, QPushButton, QMenu,QLineEdit,QMainWindow,QLabel,QWidget
-from PyQt5.QtCore import QCoreApplication,QTimer,QThread,pyqtSignal
-from PyQt5.QtGui import QIcon, QPainter, QPixmap,QPalette,QBrush
+from PyQt5.QtWidgets import QApplication, QPushButton, QMenu, QLineEdit, QMainWindow, QLabel, QWidget
+from PyQt5.QtCore import QCoreApplication, QTimer, QThread, pyqtSignal, Qt, QPoint
+from PyQt5.QtGui import QIcon, QPainter, QPixmap, QPalette, QBrush, QMouseEvent
 import sys
 
-#基本五大包导入
 
-#以下为导入功能包
+# 基本五大包导入
+
+# 以下为导入功能包
 
 
-#以下为导入自定义函数
-#工具箱
+# 以下为导入自定义函数
+# 工具箱
 
 class Ui_IM(QWidget):
 
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-    def setupUi(self,Form):
+
+    def paintEvent(self, event):  # set background_img
+        painter = QPainter(self)
+        painter.drawRect(self.rect())
+        pixmap = QPixmap("./images/Im.jpg")  # 换成自己的图片的相对路径
+        painter.drawPixmap(self.rect(), pixmap)
+
+    def off(self):
+        exit()
+
+    def min(self):
+        self.showMinimized()
+
+    def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(1063, 826)
         Form.setMinimumSize(QtCore.QSize(1024, 0))
-        Form.setStyleSheet("#Form{border-image:url(login.jpg);}")
-        #Form.setStyleSheet("#Form{background-color:yellow}")
+        self.setWindowFlags(Qt.FramelessWindowHint)
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
@@ -47,7 +60,8 @@ class Ui_IM(QWidget):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        spacerItem = QtWidgets.QSpacerItem(150, 20, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(150, 20, QtWidgets.QSizePolicy.MinimumExpanding,
+                                           QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.talkButton = QtWidgets.QPushButton(Form)
         self.talkButton.setMinimumSize(QtCore.QSize(50, 50))
@@ -69,7 +83,8 @@ class Ui_IM(QWidget):
         self.talkButton_3.setObjectName("talkButton_3")
         self.horizontalLayout_2.addWidget(self.talkButton_3)
         self.horizontalLayout_3.addLayout(self.horizontalLayout_2)
-        spacerItem3 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem3 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.MinimumExpanding,
+                                            QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem3)
         self.minum = QtWidgets.QPushButton(Form)
         self.minum.setMinimumSize(QtCore.QSize(40, 0))
@@ -81,11 +96,11 @@ class Ui_IM(QWidget):
         self.max.setText("")
         self.max.setObjectName("max")
         self.horizontalLayout_3.addWidget(self.max)
-        self.off = QtWidgets.QPushButton(Form)
-        self.off.setMinimumSize(QtCore.QSize(40, 0))
-        self.off.setText("")
-        self.off.setObjectName("off")
-        self.horizontalLayout_3.addWidget(self.off)
+        self.offbutton = QtWidgets.QPushButton(Form)
+        self.offbutton.setMinimumSize(QtCore.QSize(40, 0))
+        self.offbutton.setText("")
+        self.offbutton.setObjectName("off")
+        self.horizontalLayout_3.addWidget(self.offbutton)
         self.horizontalLayout_6.addLayout(self.horizontalLayout_3)
         self.verticalLayout.addLayout(self.horizontalLayout_6)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
@@ -123,12 +138,24 @@ class Ui_IM(QWidget):
         self.verticalLayout.addLayout(self.horizontalLayout_5)
 
         self.retranslateUi(Form)
+        self.offbutton.clicked.connect(lambda: self.off())
+        self.minum.clicked.connect(lambda: self.min())
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+    def mouseMoveEvent(self, e: QMouseEvent):  # 重写移动事件
+        self._endPos = e.pos() - self._startPos
+        self.move(self.pos() + self._endPos)
 
+    def mousePressEvent(self, e: QMouseEvent):
+        if e.button() == Qt.LeftButton:
+            self._isTracking = True
+            self._startPos = QPoint(e.x(), e.y())
 
-        #以上都有可能被修改，请勿把代码放于此上
-
+    def mouseReleaseEvent(self, e: QMouseEvent):
+        if e.button() == Qt.LeftButton:
+            self._isTracking = False
+            self._startPos = None
+            self._endPos = None
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
@@ -138,16 +165,7 @@ class Ui_IM(QWidget):
         self.attach1.setText(_translate("Form", "bak"))
 
 
-
-
-
-
-
-
-
-
-
-if __name__ == '__main__':#调试用启动器
+if __name__ == '__main__':  # 调试用启动器
     QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)
     Imapp = QApplication(sys.argv)
     ex = Ui_IM()

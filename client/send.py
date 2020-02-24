@@ -1,42 +1,56 @@
 # code:utf-8
-Version="0.0.1b"
-import socket,requests,json
-import hashlib,time,os,configparser
+Version = "0.0.1b"
+import socket, requests, json
+import hashlib, time, os, configparser
 from threading import Thread
 from config import config
-#登录中枢
+
+
+# 登录中枢
 def hash(word):
     sha256 = hashlib.sha256()
     sha256.update(word.encode('utf-8'))
     res = sha256.hexdigest()
     return res
 
+
 def connectcheck():
     add = config("u", "server", "add")
     port = config("u", "server", "port")
     url = "http://" + add + ':' + port + "/connectcheck"
-    req = requests.get(url)
-    result = json.loads(req.text)
-    return result["code"],result["version"]
+    try:
+        req = requests.get(url, timeout=3)
+        result = json.loads(req.text)
+        return result["version"]
+    except requests.exceptions.RequestException:
+        return 404
 
-def login(acc,pd):
-    add = config("u","server", "add")
-    port = config("u","server", "port")
-    #loginmode = conf.get("acc", "loginmode")
-    pd = config("u","acc", "pd")
+
+def login(acc, pd):
+    add = config("u", "server", "add")
+    port = config("u", "server", "port")
+    # loginmode = conf.get("acc", "loginmode")
+    pd = config("u", "acc", "pd")
     headers = {'Content-Type': 'application/json'}
-    url="http://"+add+':'+port+"/login"
+    url = "http://" + add + ':' + port + "/login"
     print(url)
-    pd=hash(pd)
+    pd = hash(pd)
     data = {
-            "acc":acc,
-            "pd":pd
+        "acc": acc,
+        "pd": pd
     }
-    req = requests.post(url, json.dumps(data), headers=headers)
-    result = json.loads(req.text)
-    print(result['code'])
-    return result['code']
+    try:
+        req = requests.post(url, json.dumps(data), headers=headers, timeout=3)
+        result = json.loads(req.text)
 
+        print(result['code'])
+        return result['code']
+    except requests.exceptions.RequestException as e:
+        print(e)
+        return 404
+
+
+"""
 def login_old(acc,pd):
     curpath = os.path.dirname(os.path.realpath(__file__))
     cfgpath = os.path.join(curpath, "config/user.ini")
@@ -90,24 +104,27 @@ def login_old(acc,pd):
     #except:
         #print("No server")
         #return -1
+"""
 
-#发送文件函数
-#标准文件发送函数(带检查，全加载式检查文件，不带进度，适用于10m以下）
-def sendfile(url,data,whfile,type):
-    #header = {"Content-Type": "multipart/form-data"}
-    file={type: open(whfile,"rb")}
-    req=requests.post(url,data,files=file)
+
+# 发送文件函数
+# 标准文件发送函数(带检查，全加载式检查文件，不带进度，适用于10m以下）
+def sendfile(url, data, whfile, type):
+    # header = {"Content-Type": "multipart/form-data"}
+    file = {type: open(whfile, "rb")}
+    req = requests.post(url, data, files=file)
     print(req.status_code)
-    if req.status_code==200:
+    if req.status_code == 200:
         return 0
-    elif req.status_code==501:
+    elif req.status_code == 501:
         return 1
-    elif req.status_code==400:
+    elif req.status_code == 400:
         return 2
-    elif req.status_code==401:
+    elif req.status_code == 401:
         return 3
 
 
+"""
 def sendfile1(ip,port,head,whfile):
     s = socket.socket()
     ip = socket.gethostname()
@@ -202,4 +219,5 @@ def sendfile2(ip,port,head,whfile):
 
     except:
         print("No server")
-        return 0
+        
+"""

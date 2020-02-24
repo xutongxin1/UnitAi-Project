@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QLineEdit, QMainWindow, QWidget
 from PyQt5.QtGui import QIcon, QPixmap, QPalette, QBrush
-import sys,os,configparser
+import sys, os, configparser
 
 # 基本五大包导入
 
@@ -27,14 +27,15 @@ import time
 import ctypes
 
 from config import config
+
 # 以下为导入自定义函数
 
 # import Im
 # from Main import loginsuccess
 
-loginmode=config("u","acc","loginmode")
-acc=config("u","acc","acc")
-pd=config("u","acc","pd")
+loginmode = config("u", "acc", "loginmode")
+acc = config("u", "acc", "acc")
+pd = config("u", "acc", "pd")
 
 
 class Ui_login(QWidget):
@@ -48,9 +49,8 @@ class Ui_login(QWidget):
 
     def setupUi(self, Form):
 
-
         Form.setObjectName("登陆")
-        Form.resize(1024,728)
+        Form.resize(1024, 728)
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
@@ -144,7 +144,7 @@ class Ui_login(QWidget):
 
         # 按钮事件绑定
         self.Auto.clicked.connect(self.auto)
-        if loginmode== "2":
+        if loginmode == "2":
             self.textaccount.setText(acc)
             self.textpassword.setText('111111')
         if loginmode == "1":

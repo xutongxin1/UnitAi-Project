@@ -1,43 +1,47 @@
 # code:utf-8
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import  QApplication, QPushButton, QMenu,QLineEdit,QMainWindow,QDialog,QFileDialog,QTableWidgetItem
-from PyQt5.QtCore import QCoreApplication,QTimer,QThread,pyqtSignal
-from PyQt5.QtGui import QIcon, QPainter, QPixmap,QPalette,QBrush
-import sys,os,socket,json,time,hashlib
+from PyQt5.QtWidgets import QApplication, QPushButton, QMenu, QLineEdit, QMainWindow, QDialog, QFileDialog, \
+    QTableWidgetItem
+from PyQt5.QtCore import QCoreApplication, QTimer, QThread, pyqtSignal
+from PyQt5.QtGui import QIcon, QPainter, QPixmap, QPalette, QBrush
+import sys, os, socket, json, time, hashlib
 
-#基本五大包导入
+# 基本五大包导入
 from send import sendfile
+
 num = 0
+
+
 class Ui_file_exchange(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
 
     def choose_file(self):
-            files, filetype = QFileDialog.getOpenFileNames(self,
-                                                           "多文件选择",
-                                                           "C:/",  # 起始路径
-                                                           "All Files (*)")
-            if len(files)==0:
-                return
-            global num
-            for path in files:
-                print(path)
-                self.tableWidget.setItem(num, 0, QTableWidgetItem(num))
-                self.tableWidget.setItem(num, 1, QTableWidgetItem(path))
-                filepath, fullflname = os.path.split(path)
-                fname, ext = os.path.splitext(fullflname)
-                print(ext)
+        files, filetype = QFileDialog.getOpenFileNames(self,
+                                                       "多文件选择",
+                                                       "C:/",  # 起始路径
+                                                       "All Files (*)")
+        if len(files) == 0:
+            return
+        global num
+        for path in files:
+            print(path)
+            self.tableWidget.setItem(num, 0, QTableWidgetItem(num))
+            self.tableWidget.setItem(num, 1, QTableWidgetItem(path))
+            filepath, fullflname = os.path.split(path)
+            fname, ext = os.path.splitext(fullflname)
+            print(ext)
 
-                if (ext == ".doc" or ext == ".docx" or ext == ".ppt" or ext == ".pptx" or ext == ".xlsx" or ext == ".ppts"):
-                    self.tableWidget.setItem(num, 2, QTableWidgetItem("pdf"))
-                self.tableWidget.setItem(num, 3, QTableWidgetItem("就绪"))
+            if (ext == ".doc" or ext == ".docx" or ext == ".ppt" or ext == ".pptx" or ext == ".xlsx" or ext == ".ppts"):
+                self.tableWidget.setItem(num, 2, QTableWidgetItem("pdf"))
+            self.tableWidget.setItem(num, 3, QTableWidgetItem("就绪"))
 
     def choose_document(self):
         dir_choose = QFileDialog.getExistingDirectory(self,
                                                       "选取文件夹",
-                                                  'C:/')  # 起始路径
-        if len(dir_choose)==0:
+                                                      'C:/')  # 起始路径
+        if len(dir_choose) == 0:
             return
         global num
         list = os.listdir(dir_choose)  # 列出文件夹下所有的目录与文件
@@ -52,62 +56,59 @@ class Ui_file_exchange(QMainWindow):
                 print(fullflname)
                 fname, ext = os.path.splitext(fullflname)
 
-                #if(ext=="doc"or ext=="docx" or ext=="ppt" or ext=="pptx" or ext=="xlsx" or ext=="ppts"):
-                    #self.tableWidget.setItem(num, 2, QTableWidgetItem("pdf"))
-                    #ext = self.tableWidget.item(num, 2).text()
-                    #print(ext)
+                # if(ext=="doc"or ext=="docx" or ext=="ppt" or ext=="pptx" or ext=="xlsx" or ext=="ppts"):
+                # self.tableWidget.setItem(num, 2, QTableWidgetItem("pdf"))
+                # ext = self.tableWidget.item(num, 2).text()
+                # print(ext)
                 self.tableWidget.setItem(num, 3, QTableWidgetItem("就绪"))
-                num+=1
+                num += 1
 
     def begin1(self):
-            num1=0
-            while num1<=num:
-                path = self.tableWidget.item(num1, 1).text()
-                formatto = self.tableWidget.item(num1, 2).text()
-                print(path)
-                filepath,fullflname = os.path.split(path)
-                print(fullflname)
-                key = "123321"
-                f = open(path, 'rb')
-                myHash = hashlib.md5()
-                while True:
-                    d = f.read(8096)
-                    if not d:
-                        break
-                    myHash.update(d)
-                md5 = myHash.hexdigest()
-                f.close()
-                print(md5)
-                #md5 = str(hash_code).lower()
+        num1 = 0
+        while num1 <= num:
+            path = self.tableWidget.item(num1, 1).text()
+            formatto = self.tableWidget.item(num1, 2).text()
+            print(path)
+            filepath, fullflname = os.path.split(path)
+            print(fullflname)
+            key = "123321"
+            f = open(path, 'rb')
+            myHash = hashlib.md5()
+            while True:
+                d = f.read(8096)
+                if not d:
+                    break
+                myHash.update(d)
+            md5 = myHash.hexdigest()
+            f.close()
+            print(md5)
+            # md5 = str(hash_code).lower()
 
-                data = {
-                    "order":True,
-                    "apikey": key,
-                    "filename": fullflname,
-                    "md5":"123",
-                    "formatto":formatto
-                }
-                print(data)
-                #data=json.dumps(data)
-                #back=0
-                url="http://127.0.0.1:19150/upload/exchange"
-                back=sendfile(url,data,path,"ex")
-                if (back == 0):
-                    print("ok")
-                    self.tableWidget.setItem(num1, 3, QTableWidgetItem("上传完成"))
-                elif(back == 1):
-                    self.tableWidget.setItem(num1, 3, QTableWidgetItem("未授权"))
-                    return
-                elif(back == 2):
-                    print("Error")
-                    self.tableWidget.setItem(num1, 3, QTableWidgetItem("上传错误"))
-                elif(back == 3):
-                    self.tableWidget.setItem(num1, 3, QTableWidgetItem("无法连接到服务器"))
-                    return
-                num1+=1
-
-
-
+            data = {
+                "order": True,
+                "apikey": key,
+                "filename": fullflname,
+                "md5": "123",
+                "formatto": formatto
+            }
+            print(data)
+            # data=json.dumps(data)
+            # back=0
+            url = "http://127.0.0.1:19150/upload/exchange"
+            back = sendfile(url, data, path, "ex")
+            if (back == 0):
+                print("ok")
+                self.tableWidget.setItem(num1, 3, QTableWidgetItem("上传完成"))
+            elif (back == 1):
+                self.tableWidget.setItem(num1, 3, QTableWidgetItem("未授权"))
+                return
+            elif (back == 2):
+                print("Error")
+                self.tableWidget.setItem(num1, 3, QTableWidgetItem("上传错误"))
+            elif (back == 3):
+                self.tableWidget.setItem(num1, 3, QTableWidgetItem("无法连接到服务器"))
+                return
+            num1 += 1
 
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -125,7 +126,7 @@ class Ui_file_exchange(QMainWindow):
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(4)
         self.tableWidget.setRowCount(1)
-        titles=['编号','文件路径','目标格式','状态']
+        titles = ['编号', '文件路径', '目标格式', '状态']
         self.tableWidget.setHorizontalHeaderLabels(titles)
         self.tableWidget.setColumnWidth(0, 50)
         self.tableWidget.setColumnWidth(1, 550)
@@ -153,11 +154,11 @@ class Ui_file_exchange(QMainWindow):
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
-        #第一初始化
+        # 第一初始化
         self.document.clicked.connect(self.choose_document)
         self.file.clicked.connect(self.choose_file)
         self.begin.clicked.connect(self.begin1)
-        #绑定槽
+        # 绑定槽
         self.show()
 
     def retranslateUi(self, Dialog):
@@ -175,7 +176,7 @@ class Ui_file_exchange(QMainWindow):
         self.mode2.setItemText(3, _translate("Dialog", "图片类"))
 
 
-if __name__ == '__main__':#调试用启动器
+if __name__ == '__main__':  # 调试用启动器
     QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)
     file_exchange = QApplication(sys.argv)
     ex = Ui_file_exchange()
