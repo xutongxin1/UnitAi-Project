@@ -21,16 +21,16 @@ if (True):
     id = result['data']['id']
     print(id)
 urlupload = "https://api.convertio.co/convert/" + id + "/123.doc"
-file = open('123.doc', 'rb')
-req = requests.put(urlupload, files=file)
+#file = open('123.doc', 'rb')
+files = {'file': open('E:/UnitAi-Project/client/experimentfile/文件在线转换api测试(完成修正，待验证)/123.doc', 'rb')}
+req = requests.put(urlupload, files=files)
 result = json.loads(req.text)
 print(result)
-file.close()
 print("begin!")
 urlcheck = "https://api.convertio.co/convert/" + id + "/status"
 
 while 1:
-    req = requests.get(urlcheck, headers=headers)
+    req = requests.get(urlcheck)
     result1 = json.loads(req.text)
     try:
         if (result1['data']['step'] == "finish"):
